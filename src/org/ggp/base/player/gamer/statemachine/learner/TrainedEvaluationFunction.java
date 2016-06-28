@@ -19,7 +19,7 @@ import org.neuroph.util.TransferFunctionType;
 /**
  * A generic position evaluation function, based on neural networks.
  */
-public class TrainedEvaluationFunction
+public class TrainedEvaluationFunction implements EvaluationFunction
 {
   private static final Logger LOGGER = LogManager.getLogger();
 
@@ -99,13 +99,7 @@ public class TrainedEvaluationFunction
     return lLearningRule;
   }
 
-  /**
-   * Evaluate a state according to the evaluation function.
-   *
-   * @param xiState - the state to evaluate.
-   *
-   * @return an estimate of the goal values in the specified state.
-   */
+  @Override
   public double[] evaluate(ForwardDeadReckonInternalMachineState xiState)
   {
     double[] lInputs = convertStateToInputs(xiState);
@@ -130,12 +124,7 @@ public class TrainedEvaluationFunction
     return lOutputs;
   }
 
-  /**
-   * Set a training example for the evaluation function, mapping a state to its value.
-   *
-   * @param xiState      - the state.
-   * @param xiGoalValues - the goal values to learn (in GDL order).
-   */
+  @Override
   public void sample(ForwardDeadReckonInternalMachineState xiState,
                      double[] xiGoalValues)
   {
@@ -165,6 +154,7 @@ public class TrainedEvaluationFunction
     }
   }
 
+  @Override
   public void clearSamples()
   {
     mTrainingData.clear();

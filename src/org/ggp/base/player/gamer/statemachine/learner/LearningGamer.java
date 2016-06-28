@@ -15,7 +15,9 @@ public class LearningGamer extends StateMachineGamer
 {
   private static final Logger LOGGER = LogManager.getLogger();
 
-  private static final int PLY = 9;
+  private static final boolean BREAKTHROUGH = true;
+
+  private static final int PLY = 5;
   private static final int DUMP_INTERVAL = 10;
   private static final int SAVE_INTERVAL = 100;
   private static final boolean FREEZE = false;
@@ -25,6 +27,8 @@ public class LearningGamer extends StateMachineGamer
   private static final String RELOAD_FROM = "data/games/base.breakthrough/evaluation.18hrs.4ply.100iter.nnet";
   private static final boolean TRAIN = true;
   private static final String NAME = "Learner";
+
+  private EvaluationFunction                    mBreakthroughEvalFunc;
 
   private TrainedEvaluationFunction             mEvalFunc;
   private TrainedEvaluationFunction             mFrozenEvalFunc;
@@ -55,7 +59,11 @@ public class LearningGamer extends StateMachineGamer
 
     // Create and initialise a heuristic evaluation function.
     boolean l2PlayerFixedSum = true;
-    if (RELOAD)
+    if (BREAKTHROUGH)
+    {
+      mBreakthroughEvalFunc = new BreakthroughEvaluationFunction();
+    }
+    else if (RELOAD)
     {
       LOGGER.info("Reloading saved network");
       mEvalFunc = new TrainedEvaluationFunction(RELOAD_FROM, l2PlayerFixedSum);
@@ -71,7 +79,7 @@ public class LearningGamer extends StateMachineGamer
                                                       l2PlayerFixedSum);
     }
 
-    if (TRAIN)
+    if (TRAIN && !BREAKTHROUGH)
     {
       // Use TreeStrap to train the evaluation function.
       LOGGER.info("Training");
@@ -163,7 +171,16 @@ public class LearningGamer extends StateMachineGamer
     ForwardDeadReckonInternalMachineState currentState = mUnderlyingStateMachine.createInternalState(getCurrentState());
 
     // Read off the best move according to the learned weights.
-    LearningTree lTree = new LearningTree(mUnderlyingStateMachine, mEvalFunc, mEvalFunc);
+    LearningTree lTree;
+    if (BREAKTHROUGH)
+    {
+      lTree = new LearningTree(mUnderlyingStateMachine, mBreakthroughEvalFunc, mBreakthroughEvalFunc);
+    }
+    else
+    {
+      lTree = new LearningTree(mUnderlyingStateMachine, mEvalFunc, mEvalFunc);
+    }
+
     Move lBestMove = lTree.bestMove(currentState, mOurRoleIndex, PLY);
     LOGGER.info("Playing: " + lBestMove + " vs immediate best: " + lTree.bestMoveImmediate(currentState, mOurRoleIndex));
     return lBestMove;

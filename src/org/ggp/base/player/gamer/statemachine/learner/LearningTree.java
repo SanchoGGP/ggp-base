@@ -26,8 +26,8 @@ public class LearningTree
 
   private final HashMap<ForwardDeadReckonInternalMachineState, double[]> mScoreMap;
   private final ForwardDeadReckonPropnetStateMachine mStateMachine;
-  private final TrainedEvaluationFunction mEvalFunc;
-  private final TrainedEvaluationFunction mFrozenEvalFunc;
+  private final EvaluationFunction mEvalFunc;
+  private final EvaluationFunction mFrozenEvalFunc;
   private final Role mRole;
   private final int mRoleIndex;
   private final int mNumRoles;
@@ -47,8 +47,8 @@ public class LearningTree
                                                 new ForwardDeadReckonLegalMoveInfo[MCTSTree.MAX_SUPPORTED_TREE_DEPTH][];
 
   public LearningTree(ForwardDeadReckonPropnetStateMachine xiStateMachine,
-                      TrainedEvaluationFunction xiEvalFunc,
-                      TrainedEvaluationFunction xiFrozenEvalFunc)
+                      EvaluationFunction xiEvalFunc,
+                      EvaluationFunction xiFrozenEvalFunc)
   {
     mStateMachine = xiStateMachine;
     mEvalFunc = xiEvalFunc;
