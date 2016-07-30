@@ -2161,6 +2161,9 @@ public class OptimizingPolymorphicPropNetFactory
 
     for(PolymorphicComponent c : from.getInputs())
     {
+      // When StackOverflowError has been seen here previously, it has turned out to be a stack size issue (rather
+      // than an infinite recursion bug).  On Windows, with 64-bit Oracle JVM, 2MB stack is big enough.  (1MB isn't.)
+      // To configure, use -Xss2m.
       recursiveFindReachable(pn, c, reachableComponents, assertedReachableComponents, viaBaseProp, traverseMoves);
     }
   }
