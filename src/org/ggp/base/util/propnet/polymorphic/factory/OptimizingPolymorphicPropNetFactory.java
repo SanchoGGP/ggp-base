@@ -107,6 +107,9 @@ public class OptimizingPolymorphicPropNetFactory
   static final private GdlConstant    INIT_CAPS = GdlPool.getConstant("INIT");
   static final private GdlProposition TEMP      = GdlPool.getProposition(GdlPool.getConstant("TEMP"));
 
+  // Whether loops have been found in the propnet.
+  private static boolean sLoopsFound;
+
   /**
    * @return a PropNet for the game with the given description.
    *
@@ -121,6 +124,8 @@ public class OptimizingPolymorphicPropNetFactory
       throws InterruptedException
   {
     LOGGER.debug("Building propnet");
+
+    sLoopsFound = false;
 
     // Perform transformations of the GDL.  Note that some of the later transformations re-run the earlier
     // transformations.  This is deliberate and is required because some later simplifications allow the earlier
@@ -276,7 +281,6 @@ public class OptimizingPolymorphicPropNetFactory
 
     return propnet;
   }
-
 
   private static void removeUselessBasePropositions(Map<GdlSentence, PolymorphicComponent> components,
                                                     Map<GdlSentence, PolymorphicComponent> negations,
@@ -1006,7 +1010,7 @@ public class OptimizingPolymorphicPropNetFactory
         {
           //  If we're looping here it's probably a GDL issue - flag up where we're failing
           //  and try to process assuming the proposition will exist
-          if ( looping )
+          if (looping)
           {
             LOGGER.warn("Missing base form.  Unable to process: " + curForm);
           }
@@ -1022,7 +1026,7 @@ public class OptimizingPolymorphicPropNetFactory
         SentenceForm inputForm = curForm.withName(GdlPool.INPUT);
         if (!alreadyOrdered.contains(inputForm))
         {
-          if ( looping )
+          if (looping)
           {
             LOGGER.warn("Missing input form.  Unable to process: " + curForm);
           }
@@ -1279,7 +1283,7 @@ public class OptimizingPolymorphicPropNetFactory
               PolymorphicComponent positive = components.get(transformed);
               //No, because then that will be attached to "negations", which could be bad
 
-//              if ( positive == null && transformed.arity() == 0 )
+//              if (positive == null && transformed.arity() == 0)
 //              {
 //                 positive = components.get(GdlPool.getProposition(transformed.getName()));
 //              }
@@ -1588,7 +1592,7 @@ public class OptimizingPolymorphicPropNetFactory
   {
     for(PolymorphicProposition c: pn.getBasePropositions().values())
     {
-      if ( reachable.contains(c) )
+      if (reachable.contains(c))
       {
         if (c.toString().contains("left"))
         {
@@ -1609,7 +1613,7 @@ public class OptimizingPolymorphicPropNetFactory
 
     recursiveFindReachable(pn, pn.getTerminalProposition(), directlyReachable, null, null, false);
 
-    if ( lOurGoals != null )
+    if (lOurGoals != null)
     {
       Set<PolymorphicProposition> goalProxies = new HashSet<>();
       for( PolymorphicComponent c : lOurGoals)
@@ -1624,7 +1628,7 @@ public class OptimizingPolymorphicPropNetFactory
         while(c.getInputs().size()==1)
         {
           c = c.getSingleInput();
-          if ( pn.getBasePropositions().values().contains(c) )
+          if (pn.getBasePropositions().values().contains(c))
           {
             //  Stop at the first base prop we hit - this is a direct proxy for the goal
             break;
@@ -1637,7 +1641,7 @@ public class OptimizingPolymorphicPropNetFactory
         //  dependencies (it will be included in the full [including indirect] dependencies calculated next,
         //  but not including it in this set means that self-support logic on it will not be traced back
         //  through)
-        if ( pn.getBasePropositions().values().contains(c) )
+        if (pn.getBasePropositions().values().contains(c))
         {
           goalProxies.add((PolymorphicProposition)c);
         }
@@ -1649,7 +1653,7 @@ public class OptimizingPolymorphicPropNetFactory
     //  self-dependencies for anything not already known to be directly reachable
     recursiveFindReachable(pn, pn.getTerminalProposition(), result, directlyReachable, null, true);
 
-    if ( lOurGoals != null )
+    if (lOurGoals != null)
     {
       for( PolymorphicProposition c : lOurGoals)
       {
@@ -1706,16 +1710,16 @@ public class OptimizingPolymorphicPropNetFactory
       //  The core reachable components are those relevant directly to our goals
       coreReachableComponents.addAll(reachableComponents);
 
-      if ( pn.getRoles().length > 1 )
+      if (pn.getRoles().length > 1)
       {
         //  Find the propnet's TRUE constant
         PolymorphicComponent trueConstant = null;
 
         for(PolymorphicComponent c : pn.getComponents())
         {
-          if ( c instanceof PolymorphicConstant )
+          if (c instanceof PolymorphicConstant)
           {
-            if ( ((PolymorphicConstant)c).getValue() )
+            if (((PolymorphicConstant)c).getValue())
             {
               trueConstant = c;
               break;
@@ -1736,10 +1740,10 @@ public class OptimizingPolymorphicPropNetFactory
           //  If a legal is not within the core reachable set it has no impact on anything
           //  that influences our goals and is therefore only relevant as a possible source of
           //  what amounts to a noop (in the subset of relevant components)
-          if ( !coreReachableComponents.contains(c) )
+          if (!coreReachableComponents.contains(c))
           {
             PolymorphicProposition input = pn.getLegalInputMap().get(c);
-            if ( input != null )
+            if (input != null)
             {
               fillerMoveSet.add(input.getName());
             }
@@ -1756,7 +1760,7 @@ public class OptimizingPolymorphicPropNetFactory
 
         for(Role role : pn.getRoles())
         {
-          if ( role.equals(ourRole))
+          if (role.equals(ourRole))
           {
             continue;
           }
@@ -1765,14 +1769,14 @@ public class OptimizingPolymorphicPropNetFactory
 
           for ( PolymorphicProposition p : pn.getLegalPropositions().get(role))
           {
-            if ( reachableComponents.contains(p))
+            if (reachableComponents.contains(p))
             {
               fullyIncludeRole = true;
               break;
             }
           }
 
-          if ( fullyIncludeRole )
+          if (fullyIncludeRole)
           {
             isPseudoPuzzle = false;
             //  Add in this role's goals and legals
@@ -1787,10 +1791,10 @@ public class OptimizingPolymorphicPropNetFactory
               //  If a legal is no within the core reachable set it has no impact on anything
               //  that influences our goals and is therefore only relevant as a possible source of
               //  what amounts to a noop (in the subset of relevant components)
-              if ( !coreReachableComponents.contains(c) )
+              if (!coreReachableComponents.contains(c))
               {
                 PolymorphicProposition input = pn.getLegalInputMap().get(c);
-                if ( input != null )
+                if (input != null)
                 {
                   fillerMoveSet.add(input.getName());
                 }
@@ -1819,7 +1823,7 @@ public class OptimizingPolymorphicPropNetFactory
             for(PolymorphicProposition p : pn.getGoalPropositions().get(role))
             {
               int value = Integer.parseInt(p.getName().getBody().get(1).toString());
-              if ( value < lowestVal )
+              if (value < lowestVal)
               {
                 lowestVal = value;
                 retainedGoalProp = p;
@@ -1870,14 +1874,14 @@ public class OptimizingPolymorphicPropNetFactory
     {
       for(PolymorphicProposition goalProp : pn.getGoalPropositions().get(role))
       {
-        if ( !reachableComponents.contains(goalProp))
+        if (!reachableComponents.contains(goalProp))
         {
           anyGoalsPotentiallyDiscardable = true;
           break;
         }
       }
     }
-    if ( !reachableComponents.containsAll(pn.getBasePropositions().values()) ||
+    if (!reachableComponents.containsAll(pn.getBasePropositions().values()) ||
          !reachableComponents.containsAll(pn.getInputPropositions().values()) ||
          anyGoalsPotentiallyDiscardable)
     {
@@ -1910,7 +1914,7 @@ public class OptimizingPolymorphicPropNetFactory
       int removalCount = 0;
       for(PolymorphicProposition c : pn.getBasePropositions().values())
       {
-        if ( !reachableComponents.contains(c))
+        if (!reachableComponents.contains(c))
         {
           unreachable.add(c);
         }
@@ -1920,20 +1924,20 @@ public class OptimizingPolymorphicPropNetFactory
       {
         for(PolymorphicProposition c : goals)
         {
-          if ( !reachableComponents.contains(c))
+          if (!reachableComponents.contains(c))
           {
             unreachable.add(c);
           }
         }
       }
 
-      if ( pn.getRoles().length > 1 )
+      if (pn.getRoles().length > 1)
       {
         for( PolymorphicProposition[] legals : pn.getLegalPropositions().values())
         {
           for( PolymorphicProposition c : legals)
           {
-            if ( !reachableComponents.contains(c))
+            if (!reachableComponents.contains(c))
             {
               unreachable.add(c);
             }
@@ -1941,7 +1945,7 @@ public class OptimizingPolymorphicPropNetFactory
         }
       }
 
-      if ( !unreachable.isEmpty() )
+      if (!unreachable.isEmpty())
       {
         PolymorphicConstant falseConst = pn.getComponentFactory().createConstant(-1, false);
         pn.addComponent(falseConst);
@@ -1971,15 +1975,15 @@ public class OptimizingPolymorphicPropNetFactory
   {
     boolean result = false;
 
-    if ( !newlyReachableComponents.contains(c))
+    if (!newlyReachableComponents.contains(c))
     {
       newlyReachableComponents.add(c);
 
-      if ( pn.getBasePropositions().values().contains(c) )
+      if (pn.getBasePropositions().values().contains(c))
       {
-        if ( !reachableComponents.contains(c))
+        if (!reachableComponents.contains(c))
         {
-          if ( supportsRequiredComponent(c, reachableComponents) )
+          if (supportsRequiredComponent(c, reachableComponents))
           {
             reachableComponents.add(c);
             result = true;
@@ -2002,7 +2006,7 @@ public class OptimizingPolymorphicPropNetFactory
   {
     for(PolymorphicComponent output : c.getOutputs())
     {
-      if ( supportsRequiredComponentInternal(output, reachableComponents))
+      if (supportsRequiredComponentInternal(output, reachableComponents))
       {
         return true;
       }
@@ -2013,7 +2017,7 @@ public class OptimizingPolymorphicPropNetFactory
 
   private static boolean supportsRequiredComponentInternal(PolymorphicComponent c, Set<PolymorphicComponent> reachableComponents)
   {
-    if ( c instanceof PolymorphicProposition )
+    if (c instanceof PolymorphicProposition)
     {
       //  Legal or base - if already included return true else false
       return reachableComponents.contains(c);
@@ -2021,7 +2025,7 @@ public class OptimizingPolymorphicPropNetFactory
 
     for(PolymorphicComponent output : c.getOutputs())
     {
-      if ( supportsRequiredComponentInternal(output, reachableComponents))
+      if (supportsRequiredComponentInternal(output, reachableComponents))
       {
         return true;
       }
@@ -2030,55 +2034,72 @@ public class OptimizingPolymorphicPropNetFactory
     return false;
   }
 
-  private static Boolean requiresDoes(PolymorphicComponent c)
+  private static boolean requiresDoes(PolymorphicComponent c, Set<PolymorphicComponent> xiAlreadyConsidered)
   {
-    if ( c instanceof PolymorphicProposition && ((PolymorphicProposition)c).getName().getName() == GdlPool.DOES )
+    if (xiAlreadyConsidered.contains(c))
     {
-      return true;
-    }
-    else if ( c instanceof PolymorphicTransition)
-    {
+      LOGGER.warn("Propnet loop detected - skipping some optimization");
+      sLoopsFound = true;
       return false;
     }
-    else if ( c instanceof PolymorphicAnd )
+    xiAlreadyConsidered.add(c);
+
+    if (c instanceof PolymorphicProposition && ((PolymorphicProposition)c).getName().getName() == GdlPool.DOES)
+    {
+      xiAlreadyConsidered.remove(c);
+      return true;
+    }
+    else if (c instanceof PolymorphicTransition)
+    {
+      xiAlreadyConsidered.remove(c);
+      return false;
+    }
+    else if (c instanceof PolymorphicAnd)
     {
       for(PolymorphicComponent input: c.getInputs())
       {
-        if (requiresDoes(input))
+        if (requiresDoes(input, xiAlreadyConsidered))
         {
+          xiAlreadyConsidered.remove(c);
           return true;
         }
       }
 
+      xiAlreadyConsidered.remove(c);
       return false;
     }
-    else if ( c instanceof PolymorphicOr )
+    else if (c instanceof PolymorphicOr)
     {
       for(PolymorphicComponent input: c.getInputs())
       {
-        if (!requiresDoes(input))
+        if (!requiresDoes(input, xiAlreadyConsidered))
         {
+          xiAlreadyConsidered.remove(c);
           return false;
         }
       }
 
+      xiAlreadyConsidered.remove(c);
       return true;
     }
-    else if ( c instanceof PolymorphicNot )
+    else if (c instanceof PolymorphicNot)
     {
       //  Give up if there is inversion involved - gets too complex and this is only
       //  to optimize trimming - erring on the side of returning false is always
       //  functionally safe
+      xiAlreadyConsidered.remove(c);
       return false;
     }
     else
     {
-      if ( c.getInputs().isEmpty() )
+      if (c.getInputs().isEmpty())
       {
+        xiAlreadyConsidered.remove(c);
         return false;
       }
 
-      return requiresDoes(c.getSingleInput());
+      xiAlreadyConsidered.remove(c);
+      return requiresDoes(c.getSingleInput(), xiAlreadyConsidered);
     }
   }
 
@@ -2108,7 +2129,7 @@ public class OptimizingPolymorphicPropNetFactory
 
     if (pn.getBasePropositions().values().contains(from))
     {
-      if ( assertedReachableComponents != null )
+      if (assertedReachableComponents != null)
       {
         viaBaseProp = (PolymorphicProposition)from;
 
@@ -2122,9 +2143,9 @@ public class OptimizingPolymorphicPropNetFactory
         }
       }
     }
-    else if ( pn.getLegalInputMap().containsKey(from) && ((PolymorphicProposition)from).getName().getName() == GdlPool.DOES )
+    else if (pn.getLegalInputMap().containsKey(from) && ((PolymorphicProposition)from).getName().getName() == GdlPool.DOES)
     {
-      if ( traverseMoves )
+      if (traverseMoves)
       {
         reachableComponents.add(from);
         recursiveFindReachable(pn, pn.getLegalInputMap().get(from), reachableComponents, assertedReachableComponents, null, traverseMoves);
@@ -2134,7 +2155,7 @@ public class OptimizingPolymorphicPropNetFactory
     }
     else if (from instanceof PolymorphicAnd)
     {
-      if ( viaBaseProp != null )
+      if (viaBaseProp != null)
       {
         //  Don't traverse conditions that just preserve an already set base prop, since
         //  such a path cannot CAUSE it to become set
@@ -2143,13 +2164,13 @@ public class OptimizingPolymorphicPropNetFactory
           return;
         }
       }
-      else if ( !traverseMoves )
+      else if (!traverseMoves)
       {
         //  If we're not traversing moves also don't traverse logic that requires a move to be active.
         //  For now we just handle the case of all branches directly leading (eventually) only to DOES props
         for(PolymorphicComponent c: from.getInputs())
         {
-          if ( requiresDoes(c))
+          if ((!sLoopsFound) && (requiresDoes(c, new HashSet<PolymorphicComponent>())))
           {
             return;
           }
@@ -2739,21 +2760,21 @@ public class OptimizingPolymorphicPropNetFactory
       //  First eliminate logic hard-gated by constant inputs
       for (PolymorphicComponent c : pn.getComponents())
       {
-        if ( c instanceof PolymorphicConstant )
+        if (c instanceof PolymorphicConstant)
         {
           boolean isTrue = c.getValue();
 
           Set<PolymorphicComponent> newOutputs = new HashSet<>();
           for(PolymorphicComponent output : c.getOutputs())
           {
-            if ( (!isTrue && (output instanceof PolymorphicAnd)) ||
-                 (isTrue && (output instanceof PolymorphicOr)) )
+            if ((!isTrue && (output instanceof PolymorphicAnd)) ||
+                 (isTrue && (output instanceof PolymorphicOr)))
             {
               //  Remove all input to the following component apart from the constant
               //  the next stage will then remove it as redundant
               for(PolymorphicComponent input : output.getInputs())
               {
-                if ( input != c )
+                if (input != c)
                 {
                   input.removeOutput(output);
                 }
@@ -2762,7 +2783,7 @@ public class OptimizingPolymorphicPropNetFactory
               output.removeAllInputs();
               output.addInput(c);
             }
-            else if ( output instanceof PolymorphicProposition )
+            else if (output instanceof PolymorphicProposition)
             {
               //  Fixed value proposition - needed, but its outputs can be connected
               //  directly to the source constant rather than the prop, and hence may be eliminatable
@@ -2862,7 +2883,7 @@ public class OptimizingPolymorphicPropNetFactory
         }
         else if ((c instanceof PolymorphicAnd) || (c instanceof PolymorphicOr))
         {
-          if ( c.getInputs().size() == 1 )
+          if (c.getInputs().size() == 1)
           {
             PolymorphicComponent input = c.getSingleInput();
 
@@ -3025,7 +3046,7 @@ public class OptimizingPolymorphicPropNetFactory
   {
     GdlSentence s = p.getName();
 
-    if ( s instanceof GdlRelation )
+    if (s instanceof GdlRelation)
     {
       return s.getName().equals(GdlPool.GOAL);
     }
@@ -3725,11 +3746,11 @@ public class OptimizingPolymorphicPropNetFactory
   {
     for(PolymorphicComponent output : c.getOutputs())
     {
-      if ( output instanceof PolymorphicTransition )
+      if (output instanceof PolymorphicTransition)
       {
         return false;
       }
-      if ( output instanceof PolymorphicProposition )
+      if (output instanceof PolymorphicProposition)
       {
         GdlConstant name = ((PolymorphicProposition)output).getName()
             .getName();
@@ -3740,7 +3761,7 @@ public class OptimizingPolymorphicPropNetFactory
         }
       }
 
-      if ( !hasNoNonGoalDependents(output))
+      if (!hasNoNonGoalDependents(output))
       {
         return false;
       }
@@ -3754,7 +3775,7 @@ public class OptimizingPolymorphicPropNetFactory
     {
       for (PolymorphicProposition c : roleGoals)
       {
-        if ( hasNoNonGoalDependents(c) )
+        if (hasNoNonGoalDependents(c))
         {
           propNet.removeComponent(c);
         }
@@ -3840,14 +3861,14 @@ public class OptimizingPolymorphicPropNetFactory
 
         //  We're not actually allowed to remove TERMINAL so just remove its input
         //  so, there is never any trigger cost
-        if ( name == GdlPool.TERMINAL )
+        if (name == GdlPool.TERMINAL)
         {
           c.getSingleInput().removeOutput(c);
           c.removeAllInputs();
         }
         else if (name != GdlPool.TRUE &&
                  name != GdlPool.BASE &&
-                 name != GdlPool.GOAL )
+                 name != GdlPool.GOAL)
         {
           remove = true;
         }
@@ -4011,13 +4032,11 @@ public class OptimizingPolymorphicPropNetFactory
     assert(propNet.validateClosure());
   }
 
-  private static boolean loopsFound;
-
   public static void removeDuplicateLogic(PolymorphicPropNet pn)
   {
     Map<Long, List<PolymorphicComponent>> componentSignatureMap = new HashMap<>();
 
-    loopsFound = false;
+    sLoopsFound = false;
     for (PolymorphicComponent c : pn.getComponents())
     {
       calculateSignature(c, componentSignatureMap);
@@ -4125,11 +4144,11 @@ public class OptimizingPolymorphicPropNetFactory
         {
           long inputSig = calculateSignature(input, componentSignatureMap);
 
-          if ( inputSig == 2 )
+          if (inputSig == 2)
           {
-            if ( !loopsFound )
+            if (!sLoopsFound)
             {
-              loopsFound = true;
+              sLoopsFound = true;
               LOGGER.warn("Propnet loops detected - unable to check for duplicate logic amongst components fed from such loops");
             }
             return 2;
@@ -4241,10 +4260,10 @@ public class OptimizingPolymorphicPropNetFactory
   {
     for(PolymorphicComponent c : pn.getComponents())
     {
-      if ( c instanceof PolymorphicProposition &&
+      if (c instanceof PolymorphicProposition &&
            !pn.getBasePropositions().containsValue(c) &&
            !pn.getInputPropositions().containsValue(c) &&
-           pn.getInitProposition() != c )
+           pn.getInitProposition() != c)
       {
         PolymorphicComponent input = c.getSingleInput();
 
@@ -4353,7 +4372,7 @@ public class OptimizingPolymorphicPropNetFactory
 
       for(PolymorphicProposition input : roleInputs)
       {
-        if ( input.getName().get(1).toSentence().arity() == 0 )
+        if (input.getName().get(1).toSentence().arity() == 0)
         {
           noops.add(input);
         }
@@ -4365,7 +4384,7 @@ public class OptimizingPolymorphicPropNetFactory
 
     for(PolymorphicComponent c : pn.getComponents())
     {
-      if ( c instanceof PolymorphicOr )
+      if (c instanceof PolymorphicOr)
       {
         Map<Role,Set<PolymorphicComponent>> disjunctiveInputs = new HashMap<>();
 
@@ -4374,19 +4393,19 @@ public class OptimizingPolymorphicPropNetFactory
           Set<PolymorphicProposition> roleInputs = roleInputMap.get(role);
           Set<PolymorphicComponent> inputSet = new HashSet<>();
 
-          if ( !recursiveCalculateDisjunctiveRoleInputs(c, inputSet, roleInputs, allInputs) )
+          if (!recursiveCalculateDisjunctiveRoleInputs(c, inputSet, roleInputs, allInputs))
           {
             disjunctiveInputs.clear();
             break;
           }
 
-          if ( inputSet.size() > (3*roleInputs.size())/4 )
+          if (inputSet.size() > (3*roleInputs.size())/4)
           {
             disjunctiveInputs.put(role, inputSet);
           }
         }
 
-        if ( !disjunctiveInputs.isEmpty())
+        if (!disjunctiveInputs.isEmpty())
         {
           Set<PolymorphicComponent> newNots = new HashSet<>();
 
@@ -4406,19 +4425,19 @@ public class OptimizingPolymorphicPropNetFactory
           {
             Set<PolymorphicComponent> roleInputs = disjunctiveInputs.get(role);
 
-            if ( roleInputs != null )
+            if (roleInputs != null)
             {
               PolymorphicOr newOr = pn.getComponentFactory().createOr(-1, -1);
 
               for(PolymorphicComponent input : roleInputMap.get(role))
               {
-                if ( !roleInputs.contains(input) )
+                if (!roleInputs.contains(input))
                 {
                   //  Don't add noops to the converse sets - this is somewhat
                   //  empirical and it would be possible to construct GDL it doesn't work for
                   //  but it works for the typical idioms that result from distincts and
                   //  tend to give rise to these large ORs
-                  if ( noops.contains(input) )
+                  if (noops.contains(input))
                   {
                     continue;
                   }
@@ -4434,15 +4453,15 @@ public class OptimizingPolymorphicPropNetFactory
 
               //  In the special case where nothing is left we need to use the noop since
               //  it was an OR of every other move previously
-              if ( newOr.getInputs().isEmpty())
+              if (newOr.getInputs().isEmpty())
               {
                 //  Asymmetric cases where it was all moves for one role but a specific
                 //  subset for another should NOT include the noop for the non-gating role
-                if ( noopsOnly )
+                if (noopsOnly)
                 {
                   for(PolymorphicComponent noop : noops)
                   {
-                    if ( roleInputMap.get(role).contains(noop) && !roleInputs.contains(noop))
+                    if (roleInputMap.get(role).contains(noop) && !roleInputs.contains(noop))
                     {
                       newOr.addInput(noop);
                       noop.addOutput(newOr);
@@ -4454,17 +4473,17 @@ public class OptimizingPolymorphicPropNetFactory
               {
                 //  Asymmetric cases where it was all moves for one role but a specific
                 //  subset for another should NOT include the noop for the non-gating role
-                if ( noopsOnly && !newNots.isEmpty() )
+                if (noopsOnly && !newNots.isEmpty())
                 {
                   newNots.clear();
                 }
                 noopsOnly = false;
 
-                if ( disjunctiveInputs.size() == 1 )
+                if (disjunctiveInputs.size() == 1)
                 {
                   for(PolymorphicComponent noop : noops)
                   {
-                    if ( roleInputMap.get(role).contains(noop) && !roleInputs.contains(noop))
+                    if (roleInputMap.get(role).contains(noop) && !roleInputs.contains(noop))
                     {
                       newOr.addInput(noop);
                       noop.addOutput(newOr);
@@ -4473,11 +4492,11 @@ public class OptimizingPolymorphicPropNetFactory
                 }
               }
 
-              if ( !newOr.getInputs().isEmpty() )
+              if (!newOr.getInputs().isEmpty())
               {
                 PolymorphicNot newNot = pn.getComponentFactory().createNot(-1);
 
-                if ( newOr.getInputs().size() > 1 )
+                if (newOr.getInputs().size() > 1)
                 {
                   newComponents.add(newOr);
                   newOr.addOutput(newNot);
@@ -4500,13 +4519,13 @@ public class OptimizingPolymorphicPropNetFactory
 
           PolymorphicComponent newOutput;
 
-          if ( newNots.size() == 1 )
+          if (newNots.size() == 1)
           {
             newOutput = newNots.iterator().next();
           }
           else
           {
-            if ( noopsOnly )
+            if (noopsOnly)
             {
               newOutput = pn.getComponentFactory().createConstant(-1, true);
             }
@@ -4548,11 +4567,11 @@ public class OptimizingPolymorphicPropNetFactory
 
   private static boolean recursiveCalculateDisjunctiveRoleInputs(PolymorphicComponent c, Set<PolymorphicComponent> inputs, Set<PolymorphicProposition> inputSet, Set<PolymorphicComponent> allowableInputs)
   {
-    if ( c instanceof PolymorphicOr )
+    if (c instanceof PolymorphicOr)
     {
       for(PolymorphicComponent input : c.getInputs())
       {
-        if ( !recursiveCalculateDisjunctiveRoleInputs(input, inputs, inputSet, allowableInputs))
+        if (!recursiveCalculateDisjunctiveRoleInputs(input, inputs, inputSet, allowableInputs))
         {
           return false;
         }
@@ -4560,14 +4579,14 @@ public class OptimizingPolymorphicPropNetFactory
 
       return true;
     }
-    else if ( c instanceof PolymorphicProposition )
+    else if (c instanceof PolymorphicProposition)
     {
-      if ( !allowableInputs.contains(c) )
+      if (!allowableInputs.contains(c))
       {
         return false;
       }
 
-      if ( inputSet.contains(c))
+      if (inputSet.contains(c))
       {
         inputs.add(c);
       }
@@ -4589,7 +4608,7 @@ public class OptimizingPolymorphicPropNetFactory
 
       //  Special case - don't refactor ORs leading directly into the
       //  terminal prop or we'll screw up factor analysis!
-      if ( c instanceof PolymorphicOr && c.getOutputs().contains(pn.getTerminalProposition()))
+      if (c instanceof PolymorphicOr && c.getOutputs().contains(pn.getTerminalProposition()))
       {
         continue;
       }
