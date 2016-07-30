@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-  <entry key="plan">jump f c4 d c4,jump e c6 e c4,jump f c6 f c4,jump c c6 e c6,jump f c3 f c5,jump e c7 e c5,jump c c7 e c7,jump d c4 f c4,jump d c3 f c3,jump e c1 e c3,jump d c1 d c3,jump g c4 e c4,jump b c2 d c2,jump e c4 e c6,jump c c4 c c2,jump a c3 c c3,jump e c7 e c5,jump f c2 f c4,jump d c2 b c2,jump d c3 f c3,jump g c3 e c3,jump a c4 c c4,jump f c5 f c3,jump b c6 b c4,jump c c4 c c2,jump d c5 b c5,jump a c5 c c5,jump c c1 c c3,jump f c3 d c3,jump d c3 b c3,jump b c3 b c5,jump b c5 d c5,jump d c5 f c5,jump g c5 e c5</entry>
   <entry key="num_roles">1</entry>
   <entry key="simultaneous">false</entry>
   <entry key="pseudo_simultaneous">false</entry>
@@ -11,6 +10,7 @@
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">22</entry>
   <entry key="fixed_length">false</entry>
+  <entry key="plan">jump f c4 d c4,jump e c6 e c4,jump f c6 f c4,jump c c6 e c6,jump f c3 f c5,jump e c7 e c5,jump c c7 e c7,jump d c4 f c4,jump d c3 f c3,jump e c1 e c3,jump d c1 d c3,jump g c4 e c4,jump b c2 d c2,jump e c4 e c6,jump c c4 c c2,jump a c3 c c3,jump e c7 e c5,jump f c2 f c4,jump d c2 b c2,jump d c3 f c3,jump g c3 e c3,jump a c4 c c4,jump f c5 f c3,jump b c6 b c4,jump c c4 c c2,jump d c5 b c5,jump a c5 c c5,jump c c1 c c3,jump f c3 d c3,jump d c3 b c3,jump b c3 b c5,jump b c5 d c5,jump d c5 f c5,jump g c5 e c5</entry>
   <entry key="control_mask">( ( true ( pegs s4 ) ), ( true ( pegs s13 ) ), ( true ( pegs s19 ) ), ( true ( pegs s32 ) ), ( true ( pegs s20 ) ), ( true ( pegs s28 ) ), ( true ( pegs s5 ) ), ( true ( pegs s30 ) ), ( true ( pegs s26 ) ), ( true ( pegs s35 ) ), ( true ( pegs s31 ) ), ( true ( pegs s17 ) ), ( true ( pegs s34 ) ), ( true ( pegs s11 ) ), ( true ( pegs s23 ) ), ( true ( pegs s1 ) ), ( true ( pegs s29 ) ), ( true ( pegs s24 ) ), ( true ( pegs s8 ) ), ( true ( pegs s18 ) ), ( true ( pegs s27 ) ), ( true ( pegs s10 ) ), ( true ( pegs s36 ) ), ( true ( pegs s9 ) ), ( true ( pegs s21 ) ), ( true ( pegs s22 ) ), ( true ( pegs s14 ) ), ( true ( pegs s25 ) ), ( true ( pegs s3 ) ), ( true ( pegs s6 ) ), ( true ( pegs s12 ) ), ( true ( pegs s7 ) ), ( true ( pegs s16 ) ), ( true ( pegs s33 ) ), ( true ( pegs s2 ) ), ( true ( pegs s15 ) ) )</entry>
   <entry key="latches_base_positive">{false}</entry>
   <entry key="latches_base_negative">{true,{3,0,0,6144}}</entry>

@@ -8,7 +8,7 @@
   <entry key="max_factor_failure_time">0</entry>
   <entry key="num_factors">1</entry>
   <entry key="moves_in_multiple_factors">false</entry>
-  <entry key="max_branching_factor">24</entry>
+  <entry key="max_branching_factor">26</entry>
   <entry key="fixed_length">false</entry>
   <entry key="control_mask">( ( true ( control red ) ), ( true ( control black ) ) )</entry>
   <entry key="latches_base_positive">{true,{3,6291840,108086391056891904,96}}</entry>

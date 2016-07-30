@@ -11,5 +11,11 @@
   <entry key="max_branching_factor">111</entry>
   <entry key="fixed_length">false</entry>
   <entry key="control_mask">( ( true ( turn black move ) ), ( true ( turn white move ) ), ( true ( turn white fire ) ), ( true ( turn black fire ) ) )</entry>
+  <entry key="latches_base_positive">{false}</entry>
+  <entry key="latches_base_negative">{false}</entry>
+  <entry key="latches_goal_positive">{false}</entry>
+  <entry key="latches_goal_negative">{false}</entry>
+  <entry key="latches_goal_complex">{false}</entry>
+  <entry key="latches_goal_per_role">{false}</entry>
   <entry key="factors"></entry>
 </properties>

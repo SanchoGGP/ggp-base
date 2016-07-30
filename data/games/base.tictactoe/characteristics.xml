@@ -11,5 +11,11 @@
   <entry key="max_branching_factor">9</entry>
   <entry key="fixed_length">false</entry>
   <entry key="control_mask">( ( true ( control oplayer ) ), ( true ( control xplayer ) ) )</entry>
+  <entry key="latches_base_positive">{true,{1,14725602048}}</entry>
+  <entry key="latches_base_negative">{true,{1,2454267008}}</entry>
+  <entry key="latches_goal_positive">{false}</entry>
+  <entry key="latches_goal_negative">{false}</entry>
+  <entry key="latches_goal_complex">{false}</entry>
+  <entry key="latches_goal_per_role">{false}</entry>
   <entry key="factors"></entry>
 </properties>
