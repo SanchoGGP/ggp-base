@@ -1,5 +1,6 @@
 package org.ggp.base.test;
 
+import java.io.File;
 import java.text.Collator;
 import java.util.Collections;
 import java.util.Comparator;
@@ -145,6 +146,21 @@ public class KnownGameTest extends Assert
     }
     else
     {
+      if (mGamer.getGameName().matches("^1\\d+$"))
+      {
+        // New game.  Rename the directory (so, if run other than on CI, we'll pass next time) then assert anyway.
+        File mWrongGameDir = mGamer.getGameDir();
+        File mRightGameDir = new File(mWrongGameDir.getParentFile(), mName);
+
+        if (mRightGameDir.exists())
+        {
+          assertTrue("Found game with same name but different GDL for " + mName, false);
+        }
+        else
+        {
+          mWrongGameDir.renameTo(mRightGameDir);
+        }
+      }
       assertEquals(mName, mGamer.getGameName());
     }
 
