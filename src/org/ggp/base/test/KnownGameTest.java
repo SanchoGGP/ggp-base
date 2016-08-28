@@ -60,6 +60,7 @@ public class KnownGameTest extends Assert
     AKA.put("stanford.jointconnectfour",      "stanford.dualconnectfour");
     AKA.put("stanford.threepuzzle",           "stanford.3puzzle");
     AKA.put("stanford.trifecta",              "stanford.tictactoe");
+    AKA.put("stanford.rc6zero",               "stanford.reflectconnect6");
   }
 
   /**
