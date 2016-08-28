@@ -1,0 +1,812 @@
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472053936568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"======================================================"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472053936568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Beginning new game: x1472046730077"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472053936568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Logs available at:  http:\/\/localhost:9199\/localview\/x1472046730077"
+  },
+  {
+    "logger":"org.ggp.base.util.game.GDLTranslator",
+    "timestamp":"1472053936615",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Looks like a game of stanford.jointbuttonsandlights25"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053936635",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054536635"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936683",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"GDL\n( role robot )\n( <= ( base ( p ?x ) ) ( index ?x ) )\n( <= ( base ( q ?x ) ) ( index ?x ) )\n( <= ( base ( r ?x ) ) ( index ?x ) )\n( base ( step 1 ) )\n( base ( step 2 ) )\n( base ( step 3 ) )\n( base ( step 4 ) )\n( base ( step 5 ) )\n( base ( step 6 ) )\n( base ( step 7 ) )\n( <= ( input robot ( a ?x ) ) ( index ?x ) )\n( <= ( input robot ( b ?x ) ) ( index ?x ) )\n( <= ( input robot ( c ?x ) ) ( index ?x ) )\n( index 1 )\n( index 2 )\n( index 3 )\n( index 4 )\n( index 5 )\n( index 6 )\n( index 7 )\n( index 8 )\n( index 9 )\n( index 10 )\n( index 11 )\n( index 12 )\n( index 13 )\n( index 14 )\n( index 15 )\n( index 16 )\n( index 17 )\n( index 18 )\n( index 19 )\n( index 20 )\n( index 21 )\n( index 22 )\n( index 23 )\n( index 24 )\n( index 25 )\n( init ( step 1 ) )\n( <= ( legal robot ( a ?x ) ) ( index ?x ) )\n( <= ( legal robot ( b ?x ) ) ( index ?x ) )\n( <= ( legal robot ( c ?x ) ) ( index ?x ) )\n( <= ( next ( p ?x ) ) ( does robot ( a ?x ) ) ( not ( true ( p ?x ) ) ) )\n( <= ( next ( p ?x ) ) ( does robot ( b ?x ) ) ( true ( q ?x ) ) )\n( <= ( next ( p ?x ) ) ( true ( p ?x ) ) ( not ( does robot ( a ?x ) ) ) ( not ( does robot ( b ?x ) ) ) )\n( <= ( next ( q ?x ) ) ( does robot ( b ?x ) ) ( true ( p ?x ) ) )\n( <= ( next ( q ?x ) ) ( does robot ( c ?x ) ) ( true ( r ?x ) ) )\n( <= ( next ( q ?x ) ) ( true ( q ?x ) ) ( not ( does robot ( b ?x ) ) ) ( not ( does robot ( c ?x ) ) ) )\n( <= ( next ( r ?x ) ) ( does robot ( c ?x ) ) ( true ( q ?x ) ) )\n( <= ( next ( r ?x ) ) ( true ( r ?x ) ) ( not ( does robot ( c ?x ) ) ) )\n( <= ( next ( step ?y ) ) ( true ( step ?x ) ) ( successor ?x ?y ) )\n( <= ( goal robot 100 ) ( row ?x ) )\n( <= ( goal robot 0 ) ( not ( row 1 ) ) ( not ( row 2 ) ) ( not ( row 3 ) ) ( not ( row 4 ) ) ( not ( row 5 ) ) ( not ( row 6 ) ) ( not ( row 7 ) ) ( not ( row 8 ) ) ( not ( row 9 ) ) ( not ( row 10 ) ) ( not ( row 11 ) ) ( not ( row 12 ) ) ( not ( row 13 ) ) ( not ( row 14 ) ) ( not ( row 15 ) ) ( not ( row 16 ) ) ( not ( row 17 ) ) ( not ( row 18 ) ) ( not ( row 19 ) ) ( not ( row 20 ) ) ( not ( row 21 ) ) ( not ( row 22 ) ) ( not ( row 23 ) ) ( not ( row 24 ) ) ( not ( row 25 ) ) )\n( <= ( row ?x ) ( true ( p ?x ) ) ( true ( q ?x ) ) ( true ( r ?x ) ) )\n( <= terminal ( true ( p 13 ) ) ( true ( q 13 ) ) ( true ( r 13 ) ) )\n( <= terminal ( true ( step 7 ) ) )\n( successor 1 2 )\n( successor 2 3 )\n( successor 3 4 )\n( successor 4 5 )\n( successor 5 6 )\n( successor 6 7 )\n"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936683",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Building propnet"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936726",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after anon prop removal: 749"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936731",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after unreachable removal: 752"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936733",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936733",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after first pass redundant components removal: 749"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936733",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Net components removed by input->output factorization: 0"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936733",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Fanout reduction by factorization of size: 0 at a cost of 0 gates"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936733",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after large gate refactoring: 749"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936734",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 1 duplicate components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936734",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after duplicate removal: 748"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936734",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after input set optimization: 748"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936735",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after inverted input optimization: 724"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936735",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936735",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after further removal of redundant components: 724"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936736",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components: 724 with an average of 1 inputs."
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936736",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num multi-input components: 303 with an average of 2 inputs."
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472053936738",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 425"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.FactorAnalyser",
+    "timestamp":"1472053936739",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reloading control set: ( ( true ( step 4 ) ), ( true ( step 6 ) ), ( true ( step 5 ) ), ( true ( step 7 ) ), ( true ( step 3 ) ), ( true ( step 2 ) ), ( true ( step 1 ) ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936747",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reducing with respect to XSentence: ( true ( step 3 ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936747",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( step 3 ) ) to value: true"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936751",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 6 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936755",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936755",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Possible OSentence: ( true ( step 4 ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936755",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( step 4 ) ) to value: true"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936758",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 6 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936762",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936762",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Fails to recover back-transition to ( true ( step 3 ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936762",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reverting OSentence optimizations"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936765",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( step 3 ) ) to value: true"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936769",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 6 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936772",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936772",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( step 3 ) ) to value: false"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936776",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936776",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components remaining in X-net: 722"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936776",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components remaining in O-net: 723"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936784",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 32 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936788",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936792",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 32 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936795",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936797",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 405 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936797",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936797",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936799",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 379 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936799",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472053936800",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936800",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal-less X-net: 693"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936800",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal-less O-net: 694"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936800",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal net:        106"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472053936800",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in terminality net: 7"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472053936801",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 425"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472053936804",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 425"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472053936804",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 27"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472053936804",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 2"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"This is Sancho 1.61d with last commit b573590fa4a633e2a3cd1355aad3cfe4b8095d5b"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Running with machine-specific properties:"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tSAFETY_MARGIN = 3300 (default: 2500)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tCREATING_DATABASE = false (default: false)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tWC_LOCATION = C:\/Personal\/Projects\/GGP\/ggp-base (default: null)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tCPU_INTENSIVE_THREADS = 4 (default: -1)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472053936805",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tUSE_AFFINITY = false (default: true)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936813",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Start clock: 120s"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936813",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Play clock:  30s"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936813",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"We are:      robot"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936814",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Considering saved plan: a 14,b 14,a 14,c 14,b 14,a 14"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053936814",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Ready to play"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053938135",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054538135"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053938135",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 1 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053938135",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053938135",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( a 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053938135",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053939491",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054539491"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 1: [( a 14 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( a 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 2 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( b 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053939491",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053940827",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054540827"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 2: [( b 14 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( b 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 3 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( a 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053940827",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053942155",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054542155"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 3: [( a 14 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( a 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 4 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( c 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053942155",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053943488",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054543488"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943488",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 4: [( c 14 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943488",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( c 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943489",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 5 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943489",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943489",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( b 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053943489",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053944831",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472054544831"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 5: [( b 14 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( b 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 6 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( a 14 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053944831",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053946180",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Final score: 100"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.GameSearcher",
+    "timestamp":"1472053946180",
+    "level":"INFO",
+    "thread":"Search Processor",
+    "message":"Terminating GameSearcher (mTerminateRequested = true)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053946307",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Stop the watchdog"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472053946307",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog terminated"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472053949350",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Tidy-up complete"
+  }

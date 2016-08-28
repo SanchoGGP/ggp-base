@@ -1,0 +1,225 @@
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472057478956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"======================================================"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472057478956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Beginning new game: x1472056382022"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472057478956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Logs available at:  http:\/\/localhost:9199\/localview\/x1472056382022"
+  },
+  {
+    "logger":"org.ggp.base.util.game.GDLTranslator",
+    "timestamp":"1472057479004",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Unrecognised game.  Created new game directory: C:\\Personal\\Projects\\GGP\\ggp-base\\data\\games\\1472057479004"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472057479009",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472058079009"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057479053",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"GDL\n( role robot )\n( board 1 )\n( board 2 )\n( board 3 )\n( board 4 )\n( board 5 )\n( board 6 )\n( board 7 )\n( board 8 )\n( board 9 )\n( board 10 )\n( button p )\n( button q )\n( button r )\n( base ( step 1 ) )\n( base ( step 2 ) )\n( base ( step 3 ) )\n( base ( step 4 ) )\n( base ( step 5 ) )\n( base ( step 6 ) )\n( base ( step 7 ) )\n( <= ( base ( state ?Bu ?Bo ) ) ( button ?Bu ) ( board ?Bo ) )\n( action a )\n( action b )\n( action c )\n( <= ( input robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) ( action ?A1 ) ( action ?A2 ) ( action ?A3 ) ( action ?A4 ) ( action ?A5 ) ( action ?A6 ) ( action ?A7 ) ( action ?A8 ) ( action ?A9 ) ( action ?A10 ) )\n( init ( step 1 ) )\n( action a )\n( action b )\n( action c )\n( <= ( legal robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) ( action ?A1 ) ( action ?A2 ) ( action ?A3 ) ( action ?A4 ) ( action ?A5 ) ( action ?A6 ) ( action ?A7 ) ( action ?A8 ) ( action ?A9 ) ( action ?A10 ) )\n( <= ( doesOne robot ?Action 1 ) ( does robot ( set ?Action ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 2 ) ( does robot ( set ?A1 ?Action ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 3 ) ( does robot ( set ?A1 ?A2 ?Action ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 4 ) ( does robot ( set ?A1 ?A2 ?A3 ?Action ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 5 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?Action ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 6 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?Action ?A7 ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 7 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?Action ?A8 ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 8 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?Action ?A9 ?A10 ) ) )\n( <= ( doesOne robot ?Action 9 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?Action ?A10 ) ) )\n( <= ( doesOne robot ?Action 10 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?Action ) ) )\n( <= ( next ( state p ?Board ) ) ( doesOne robot a ?Board ) ( not ( true ( state p ?Board ) ) ) )\n( <= ( next ( state p ?Board ) ) ( doesOne robot b ?Board ) ( true ( state q ?Board ) ) )\n( <= ( next ( state p ?Board ) ) ( doesOne robot c ?Board ) ( true ( state p ?Board ) ) )\n( <= ( next ( state q ?Board ) ) ( doesOne robot a ?Board ) ( true ( state q ?Board ) ) )\n( <= ( next ( state q ?Board ) ) ( doesOne robot b ?Board ) ( true ( state p ?Board ) ) )\n( <= ( next ( state q ?Board ) ) ( doesOne robot c ?Board ) ( true ( state r ?Board ) ) )\n( <= ( next ( state r ?Board ) ) ( doesOne robot a ?Board ) ( true ( state r ?Board ) ) )\n( <= ( next ( state r ?Board ) ) ( doesOne robot b ?Board ) ( true ( state r ?Board ) ) )\n( <= ( next ( state r ?Board ) ) ( doesOne robot c ?Board ) ( true ( state q ?Board ) ) )\n( <= ( next ( step ?Y ) ) ( true ( step ?X ) ) ( successor ?X ?Y ) )\n( <= ( goal robot 0 ) ( board ?Bo ) ( button ?Bu ) ( not ( true ( state ?Bu ?Bo ) ) ) )\n( <= ( goal robot 100 ) ( not ( goal robot 0 ) ) )\n( <= ( success ?Board ) ( true ( state p ?Board ) ) ( true ( state q ?Board ) ) ( true ( state r ?Board ) ) )\n( <= terminal ( success 1 ) ( success 2 ) )\n( <= terminal ( true ( step 7 ) ) )\n( successor 1 2 )\n( successor 2 3 )\n( successor 3 4 )\n( successor 4 5 )\n( successor 5 6 )\n( successor 6 7 )\n"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057479053",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Building propnet"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057528164",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after anon prop removal: 118364"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057529397",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after unreachable removal: 118367"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057529577",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 7 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057529577",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after first pass redundant components removal: 118362"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057529675",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Net components removed by input->output factorization: 0"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057529704",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Fanout reduction by factorization of size: 0 at a cost of 0 gates"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057529704",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after large gate refactoring: 118362"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057529819",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 0 duplicate components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057529819",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after duplicate removal: 118362"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057530129",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after input set optimization: 118362"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057530269",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after inverted input optimization: 118343"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472057530445",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057530446",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after further removal of redundant components: 118343"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057599183",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components: 118343 with an average of 5 inputs."
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472057599183",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num multi-input components: 153 with an average of 3861 inputs."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.StateMachineGamer",
+    "timestamp":"1472057599347",
+    "level":"ERROR",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Exception in player during meta-gaming",
+    "throwable":"java.lang.ArrayIndexOutOfBoundsException: -32768\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536)\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601)\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340)\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157)\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214)\\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247)\\n\tat org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289)\\n\tat org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38)\\n\tat org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204)\\n\tat org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70)\\n\tat org.ggp.base.player.GamePlayer.run(GamePlayer.java:111)\\n"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057599351",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] java.lang.ArrayIndexOutOfBoundsException: -32768\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247)\r\n\tat org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289)\r\n\tat org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38)\r\n\tat org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204)\r\n\tat org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70)\r\n\tat org.ggp.base.player.GamePlayer.run(GamePlayer.java:111)\r\n"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057599361",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] An unhandled exception occurred during metagaming: org.ggp.base.player.gamer.exception.MetaGamingException: java.lang.ArrayIndexOutOfBoundsException: -32768\r\n\tat org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:214)\r\n\tat org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70)\r\n\tat org.ggp.base.player.GamePlayer.run(GamePlayer.java:111)\r\nCaused by: java.lang.ArrayIndexOutOfBoundsException: -32768\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214)\r\n\tat org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247)\r\n\tat org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289)\r\n\tat org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38)\r\n\tat org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204)\r\n\t... 2 more\r\n"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057600070",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057601390",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057602714",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057604039",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057605360",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057606689",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got play message not intended for current game: ignoring."
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.StdOutErrLog",
+    "timestamp":"1472057608016",
+    "level":"WARN",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"[GamePlayer] Got stop message not intended for current game: ignoring."
+  }

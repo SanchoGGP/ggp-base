@@ -1,0 +1,169 @@
+2016-08-24 17:50:43,884 INFO  RequestFactory                 ======================================================
+2016-08-24 17:50:43,884 INFO  RequestFactory                 Beginning new game: x1472056316044
+2016-08-24 17:50:43,884 INFO  RequestFactory                 Logs available at:  http://localhost:9199/localview/x1472056316044
+2016-08-24 17:50:43,922 INFO  GDLTranslator                  Looks like a game of stanford.bandl7
+2016-08-24 17:50:43,927 DEBUG Watchdog                       Watchdog won't fire until: 1472058043927
+2016-08-24 17:50:43,973 DEBUG dDeadReckonPropnetStateMachine GDL
+( role robot )
+( board 1 )
+( board 2 )
+( board 3 )
+( board 4 )
+( board 5 )
+( board 6 )
+( board 7 )
+( button p )
+( button q )
+( button r )
+( base ( step 1 ) )
+( base ( step 2 ) )
+( base ( step 3 ) )
+( base ( step 4 ) )
+( base ( step 5 ) )
+( base ( step 6 ) )
+( base ( step 7 ) )
+( <= ( base ( state ?bu ?bo ) ) ( button ?bu ) ( board ?bo ) )
+( action a )
+( action b )
+( action c )
+( <= ( input robot ( set ?a1 ?a2 ?a3 ?a4 ?a5 ?a6 ?a7 ) ) ( action ?a1 ) ( action ?a2 ) ( action ?a3 ) ( action ?a4 ) ( action ?a5 ) ( action ?a6 ) ( action ?a7 ) )
+( init ( step 1 ) )
+( action a )
+( action b )
+( action c )
+( <= ( legal robot ( set ?a1 ?a2 ?a3 ?a4 ?a5 ?a6 ?a7 ) ) ( action ?a1 ) ( action ?a2 ) ( action ?a3 ) ( action ?a4 ) ( action ?a5 ) ( action ?a6 ) ( action ?a7 ) )
+( <= ( doesOne robot ?action 1 ) ( does robot ( set ?action ?a2 ?a3 ?a4 ?a5 ?a6 ?a7 ) ) )
+( <= ( doesOne robot ?action 2 ) ( does robot ( set ?a1 ?action ?a3 ?a4 ?a5 ?a6 ?a7 ) ) )
+( <= ( doesOne robot ?action 3 ) ( does robot ( set ?a1 ?a2 ?action ?a4 ?a5 ?a6 ?a7 ) ) )
+( <= ( doesOne robot ?action 4 ) ( does robot ( set ?a1 ?a2 ?a3 ?action ?a5 ?a6 ?a7 ) ) )
+( <= ( doesOne robot ?action 5 ) ( does robot ( set ?a1 ?a2 ?a3 ?a4 ?action ?a6 ?a7 ) ) )
+( <= ( doesOne robot ?action 6 ) ( does robot ( set ?a1 ?a2 ?a3 ?a4 ?a5 ?action ?a7 ) ) )
+( <= ( doesOne robot ?action 7 ) ( does robot ( set ?a1 ?a2 ?a3 ?a4 ?a5 ?a6 ?action ) ) )
+( <= ( next ( state p ?board ) ) ( doesOne robot a ?board ) ( not ( true ( state p ?board ) ) ) )
+( <= ( next ( state p ?board ) ) ( doesOne robot b ?board ) ( true ( state q ?board ) ) )
+( <= ( next ( state p ?board ) ) ( doesOne robot c ?board ) ( true ( state p ?board ) ) )
+( <= ( next ( state q ?board ) ) ( doesOne robot a ?board ) ( true ( state q ?board ) ) )
+( <= ( next ( state q ?board ) ) ( doesOne robot b ?board ) ( true ( state p ?board ) ) )
+( <= ( next ( state q ?board ) ) ( doesOne robot c ?board ) ( true ( state r ?board ) ) )
+( <= ( next ( state r ?board ) ) ( doesOne robot a ?board ) ( true ( state r ?board ) ) )
+( <= ( next ( state r ?board ) ) ( doesOne robot b ?board ) ( true ( state r ?board ) ) )
+( <= ( next ( state r ?board ) ) ( doesOne robot c ?board ) ( true ( state q ?board ) ) )
+( <= ( next ( step ?y ) ) ( true ( step ?x ) ) ( successor ?x ?y ) )
+( <= ( goal robot 0 ) ( board ?bo ) ( button ?bu ) ( not ( true ( state ?bu ?bo ) ) ) )
+( <= ( goal robot 100 ) ( not ( goal robot 0 ) ) )
+( <= ( success ?board ) ( true ( state p ?board ) ) ( true ( state q ?board ) ) ( true ( state r ?board ) ) )
+( <= terminal ( success 1 ) ( success 2 ) )
+( <= terminal ( true ( step 7 ) ) )
+( successor 1 2 )
+( successor 2 3 )
+( successor 3 4 )
+( successor 4 5 )
+( successor 5 6 )
+( successor 6 7 )
+
+2016-08-24 17:50:43,974 DEBUG izingPolymorphicPropNetFactory Building propnet
+2016-08-24 17:50:44,743 DEBUG dDeadReckonPropnetStateMachine Num components after anon prop removal: 4568
+2016-08-24 17:50:44,781 DEBUG dDeadReckonPropnetStateMachine Num components after unreachable removal: 4571
+2016-08-24 17:50:44,793 DEBUG izingPolymorphicPropNetFactory Removed 7 redundant components
+2016-08-24 17:50:44,793 DEBUG dDeadReckonPropnetStateMachine Num components after first pass redundant components removal: 4566
+2016-08-24 17:50:44,797 DEBUG izingPolymorphicPropNetFactory Net components removed by input->output factorization: 0
+2016-08-24 17:50:44,798 DEBUG izingPolymorphicPropNetFactory Fanout reduction by factorization of size: 0 at a cost of 0 gates
+2016-08-24 17:50:44,798 DEBUG dDeadReckonPropnetStateMachine Num components after large gate refactoring: 4566
+2016-08-24 17:50:44,802 DEBUG izingPolymorphicPropNetFactory Removed 0 duplicate components
+2016-08-24 17:50:44,802 DEBUG dDeadReckonPropnetStateMachine Num components after duplicate removal: 4566
+2016-08-24 17:50:44,809 DEBUG dDeadReckonPropnetStateMachine Num components after input set optimization: 4566
+2016-08-24 17:50:44,814 DEBUG dDeadReckonPropnetStateMachine Num components after inverted input optimization: 4553
+2016-08-24 17:50:44,822 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:50:44,822 DEBUG dDeadReckonPropnetStateMachine Num components after further removal of redundant components: 4553
+2016-08-24 17:50:44,886 DEBUG dDeadReckonPropnetStateMachine Num components: 4553 with an average of 3 inputs.
+2016-08-24 17:50:44,886 DEBUG dDeadReckonPropnetStateMachine Num multi-input components: 108 with an average of 143 inputs.
+2016-08-24 17:50:44,900 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 687
+2016-08-24 17:50:44,904 DEBUG FactorAnalyser                 Reloading control set: ( ( true ( step 6 ) ), ( true ( step 4 ) ), ( true ( step 5 ) ), ( true ( step 2 ) ), ( true ( step 7 ) ), ( true ( step 1 ) ), ( true ( step 3 ) ) )
+2016-08-24 17:50:44,984 INFO  dDeadReckonPropnetStateMachine Reducing with respect to XSentence: ( true ( state p 7 ) )
+2016-08-24 17:50:44,984 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( state p 7 ) ) to value: true
+2016-08-24 17:50:45,011 DEBUG izingPolymorphicPropNetFactory Removed 8 redundant components
+2016-08-24 17:50:45,037 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,037 DEBUG dDeadReckonPropnetStateMachine Reverting OSentence optimizations
+2016-08-24 17:50:45,074 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( state p 7 ) ) to value: true
+2016-08-24 17:50:45,102 DEBUG izingPolymorphicPropNetFactory Removed 8 redundant components
+2016-08-24 17:50:45,128 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,128 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( state p 7 ) ) to value: false
+2016-08-24 17:50:45,157 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,185 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,185 DEBUG dDeadReckonPropnetStateMachine Num components remaining in X-net: 4547
+2016-08-24 17:50:45,185 DEBUG dDeadReckonPropnetStateMachine Num components remaining in O-net: 4545
+2016-08-24 17:50:45,254 DEBUG izingPolymorphicPropNetFactory Removed 8 redundant components
+2016-08-24 17:50:45,283 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,309 DEBUG izingPolymorphicPropNetFactory Removed 6 redundant components
+2016-08-24 17:50:45,336 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 17:50:45,353 DEBUG izingPolymorphicPropNetFactory Removed 119 redundant components
+2016-08-24 17:50:45,353 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:50:45,353 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:50:45,372 DEBUG izingPolymorphicPropNetFactory Removed 117 redundant components
+2016-08-24 17:50:45,372 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:50:45,372 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:50:45,372 INFO  dDeadReckonPropnetStateMachine Num components in goal-less X-net: 4542
+2016-08-24 17:50:45,372 INFO  dDeadReckonPropnetStateMachine Num components in goal-less O-net: 4542
+2016-08-24 17:50:45,372 INFO  dDeadReckonPropnetStateMachine Num components in goal net:        27
+2016-08-24 17:50:45,372 INFO  dDeadReckonPropnetStateMachine Num components in terminality net: 10
+2016-08-24 17:50:45,388 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 681
+2016-08-24 17:50:45,407 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 679
+2016-08-24 17:50:45,411 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 3
+2016-08-24 17:50:45,412 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 2
+2016-08-24 17:50:45,413 INFO  Sancho                         This is Sancho 1.61d with last commit b573590fa4a633e2a3cd1355aad3cfe4b8095d5b
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   Running with machine-specific properties:
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   	SAFETY_MARGIN = 3300 (default: 2500)
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   	CREATING_DATABASE = false (default: false)
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   	WC_LOCATION = C:/Personal/Projects/GGP/ggp-base (default: null)
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   	CPU_INTENSIVE_THREADS = 4 (default: -1)
+2016-08-24 17:50:45,413 INFO  MachineSpecificConfiguration   	USE_AFFINITY = false (default: true)
+2016-08-24 17:50:45,420 INFO  Sancho                         Start clock: 120s
+2016-08-24 17:50:45,421 INFO  Sancho                         Play clock:  30s
+2016-08-24 17:50:45,421 INFO  Sancho                         We are:      robot
+2016-08-24 17:50:45,421 INFO  Sancho                         Considering saved plan: set a a a a a a a,set b b b b b b b,set c c c c c c c,set a a a a a a a,set b b b b b b b,set a a a a a a a
+2016-08-24 17:50:45,421 INFO  Sancho                         Ready to play
+2016-08-24 17:50:46,741 DEBUG Watchdog                       Watchdog won't fire until: 1472058046741
+2016-08-24 17:50:46,741 INFO  Sancho                         > > > > > Starting turn 1 < < < < <
+2016-08-24 17:50:46,741 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:46,741 INFO  Sancho                         Playing pre-planned move: ( set a a a a a a a )
+2016-08-24 17:50:46,741 DEBUG Sancho                         Move took: 0
+2016-08-24 17:50:48,076 DEBUG Watchdog                       Watchdog won't fire until: 1472058048076
+2016-08-24 17:50:48,076 INFO  Sancho                         Moves played for turn 1: [( set a a a a a a a )]
+2016-08-24 17:50:48,076 INFO  Sancho                         Non-null move last turn was: ( set a a a a a a a )
+2016-08-24 17:50:48,076 INFO  Sancho                         > > > > > Starting turn 2 < < < < <
+2016-08-24 17:50:48,076 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:48,076 INFO  Sancho                         Playing pre-planned move: ( set b b b b b b b )
+2016-08-24 17:50:48,077 DEBUG Sancho                         Move took: 1
+2016-08-24 17:50:49,403 DEBUG Watchdog                       Watchdog won't fire until: 1472058049403
+2016-08-24 17:50:49,403 INFO  Sancho                         Moves played for turn 2: [( set b b b b b b b )]
+2016-08-24 17:50:49,404 INFO  Sancho                         Non-null move last turn was: ( set b b b b b b b )
+2016-08-24 17:50:49,404 INFO  Sancho                         > > > > > Starting turn 3 < < < < <
+2016-08-24 17:50:49,404 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:49,404 INFO  Sancho                         Playing pre-planned move: ( set c c c c c c c )
+2016-08-24 17:50:49,404 DEBUG Sancho                         Move took: 1
+2016-08-24 17:50:50,730 DEBUG Watchdog                       Watchdog won't fire until: 1472058050730
+2016-08-24 17:50:50,730 INFO  Sancho                         Moves played for turn 3: [( set c c c c c c c )]
+2016-08-24 17:50:50,730 INFO  Sancho                         Non-null move last turn was: ( set c c c c c c c )
+2016-08-24 17:50:50,731 INFO  Sancho                         > > > > > Starting turn 4 < < < < <
+2016-08-24 17:50:50,731 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:50,731 INFO  Sancho                         Playing pre-planned move: ( set a a a a a a a )
+2016-08-24 17:50:50,731 DEBUG Sancho                         Move took: 1
+2016-08-24 17:50:52,065 DEBUG Watchdog                       Watchdog won't fire until: 1472058052065
+2016-08-24 17:50:52,065 INFO  Sancho                         Moves played for turn 4: [( set a a a a a a a )]
+2016-08-24 17:50:52,066 INFO  Sancho                         Non-null move last turn was: ( set a a a a a a a )
+2016-08-24 17:50:52,066 INFO  Sancho                         > > > > > Starting turn 5 < < < < <
+2016-08-24 17:50:52,066 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:52,066 INFO  Sancho                         Playing pre-planned move: ( set b b b b b b b )
+2016-08-24 17:50:52,066 DEBUG Sancho                         Move took: 1
+2016-08-24 17:50:53,392 DEBUG Watchdog                       Watchdog won't fire until: 1472058053391
+2016-08-24 17:50:53,392 INFO  Sancho                         Moves played for turn 5: [( set b b b b b b b )]
+2016-08-24 17:50:53,392 INFO  Sancho                         Non-null move last turn was: ( set b b b b b b b )
+2016-08-24 17:50:53,392 INFO  Sancho                         > > > > > Starting turn 6 < < < < <
+2016-08-24 17:50:53,392 DEBUG Sancho                         Calculating current state
+2016-08-24 17:50:53,392 INFO  Sancho                         Playing pre-planned move: ( set a a a a a a a )
+2016-08-24 17:50:53,392 DEBUG Sancho                         Move took: 0
+2016-08-24 17:50:54,725 INFO  Sancho                         Final score: 100
+2016-08-24 17:50:54,725 INFO  GameSearcher                   Terminating GameSearcher (mTerminateRequested = true)
+2016-08-24 17:50:54,838 INFO  Watchdog                       Stop the watchdog
+2016-08-24 17:50:54,839 INFO  Watchdog                       Watchdog terminated
+2016-08-24 17:50:57,884 INFO  Sancho                         Tidy-up complete

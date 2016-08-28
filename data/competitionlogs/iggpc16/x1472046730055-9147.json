@@ -1,0 +1,2849 @@
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472051044670",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"======================================================"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472051044670",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Beginning new game: x1472046730055"
+  },
+  {
+    "logger":"org.ggp.base.player.request.factory.RequestFactory",
+    "timestamp":"1472051044670",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Logs available at:  http:\/\/localhost:9199\/localview\/x1472046730055"
+  },
+  {
+    "logger":"org.ggp.base.util.game.GDLTranslator",
+    "timestamp":"1472051044820",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Looks like a game of stanford.hunterbig"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051044842",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051644842"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051044890",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"GDL\n( role robot )\n( <= ( base ( cell ?m ?n ?p ) ) ( row ?m ) ( col ?n ) ( piece ?p ) )\n( <= ( base ( captures ?m ) ) ( scoremap ?m ?n ) )\n( <= ( base ( step ?n ) ) ( succ ?m ?n ) )\n( <= ( input robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( row ?m1 ) ( col ?n1 ) ( knightmove ?m1 ?n1 ?m2 ?n2 ) )\n( row 1 )\n( row 2 )\n( row 3 )\n( row 4 )\n( row 5 )\n( row 6 )\n( row 7 )\n( col 1 )\n( col 2 )\n( col 3 )\n( col 4 )\n( col 5 )\n( col 6 )\n( col 7 )\n( piece knight )\n( piece pawn )\n( piece blank )\n( init ( cell 1 1 knight ) )\n( init ( cell 1 2 pawn ) )\n( init ( cell 1 3 pawn ) )\n( init ( cell 1 4 pawn ) )\n( init ( cell 1 5 pawn ) )\n( init ( cell 1 6 pawn ) )\n( init ( cell 1 7 pawn ) )\n( init ( cell 2 1 pawn ) )\n( init ( cell 2 2 pawn ) )\n( init ( cell 2 3 pawn ) )\n( init ( cell 2 4 pawn ) )\n( init ( cell 2 5 pawn ) )\n( init ( cell 2 6 pawn ) )\n( init ( cell 2 7 pawn ) )\n( init ( cell 3 1 pawn ) )\n( init ( cell 3 2 pawn ) )\n( init ( cell 3 3 pawn ) )\n( init ( cell 3 4 pawn ) )\n( init ( cell 3 5 pawn ) )\n( init ( cell 3 6 pawn ) )\n( init ( cell 3 7 pawn ) )\n( init ( cell 4 1 pawn ) )\n( init ( cell 4 2 pawn ) )\n( init ( cell 4 3 pawn ) )\n( init ( cell 4 4 pawn ) )\n( init ( cell 4 5 pawn ) )\n( init ( cell 4 6 pawn ) )\n( init ( cell 4 7 pawn ) )\n( init ( cell 5 1 pawn ) )\n( init ( cell 5 2 pawn ) )\n( init ( cell 5 3 pawn ) )\n( init ( cell 5 4 pawn ) )\n( init ( cell 5 5 pawn ) )\n( init ( cell 5 6 pawn ) )\n( init ( cell 5 7 pawn ) )\n( init ( cell 6 1 pawn ) )\n( init ( cell 6 2 pawn ) )\n( init ( cell 6 3 pawn ) )\n( init ( cell 6 4 pawn ) )\n( init ( cell 6 5 pawn ) )\n( init ( cell 6 6 pawn ) )\n( init ( cell 6 7 pawn ) )\n( init ( cell 7 1 pawn ) )\n( init ( cell 7 2 pawn ) )\n( init ( cell 7 3 pawn ) )\n( init ( cell 7 4 pawn ) )\n( init ( cell 7 5 pawn ) )\n( init ( cell 7 6 pawn ) )\n( init ( cell 7 7 pawn ) )\n( init ( captures 0 ) )\n( init ( step 1 ) )\n( <= ( legal robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m1 ?n1 knight ) ) ( knightmove ?m1 ?n1 ?m2 ?n2 ) )\n( <= ( next ( cell ?m2 ?n2 knight ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) )\n( <= ( next ( cell ?m1 ?n1 blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) )\n( <= ( next ( cell ?u ?v pawn ) ) ( true ( cell ?u ?v pawn ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?u ?m2 ) )\n( <= ( next ( cell ?u ?v pawn ) ) ( true ( cell ?u ?v pawn ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?v ?n2 ) )\n( <= ( next ( cell ?u ?v blank ) ) ( true ( cell ?u ?v blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?u ?m2 ) )\n( <= ( next ( cell ?u ?v blank ) ) ( true ( cell ?u ?v blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?v ?n2 ) )\n( <= ( next ( captures ?old ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m2 ?n2 blank ) ) ( true ( captures ?old ) ) )\n( <= ( next ( captures ?new ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m2 ?n2 pawn ) ) ( true ( captures ?old ) ) ( succ ?old ?new ) )\n( <= ( next ( step ?new ) ) ( true ( step ?old ) ) ( succ ?old ?new ) )\n( <= ( goal robot ?goal ) ( true ( captures ?count ) ) ( scoremap ?count ?goal ) )\n( <= terminal ( true ( step 49 ) ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m1 ?m2 ) ( add2col ?n1 ?n2 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m1 ?m2 ) ( add2col ?n2 ?n1 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m2 ?m1 ) ( add2col ?n1 ?n2 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m2 ?m1 ) ( add2col ?n2 ?n1 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m1 ?m2 ) ( add1col ?n1 ?n2 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m1 ?m2 ) ( add1col ?n2 ?n1 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m2 ?m1 ) ( add1col ?n1 ?n2 ) )\n( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m2 ?m1 ) ( add1col ?n2 ?n1 ) )\n( succ 0 1 )\n( succ 1 2 )\n( succ 2 3 )\n( succ 3 4 )\n( succ 4 5 )\n( succ 5 6 )\n( succ 6 7 )\n( succ 7 8 )\n( succ 8 9 )\n( succ 9 10 )\n( succ 10 11 )\n( succ 11 12 )\n( succ 12 13 )\n( succ 13 14 )\n( succ 14 15 )\n( succ 15 16 )\n( succ 16 17 )\n( succ 17 18 )\n( succ 18 19 )\n( succ 19 20 )\n( succ 20 21 )\n( succ 21 22 )\n( succ 22 23 )\n( succ 23 24 )\n( succ 24 25 )\n( succ 25 26 )\n( succ 26 27 )\n( succ 27 28 )\n( succ 28 29 )\n( succ 29 30 )\n( succ 30 31 )\n( succ 31 32 )\n( succ 32 33 )\n( succ 33 34 )\n( succ 34 35 )\n( succ 35 36 )\n( succ 36 37 )\n( succ 37 38 )\n( succ 38 39 )\n( succ 39 40 )\n( succ 40 41 )\n( succ 41 42 )\n( succ 42 43 )\n( succ 43 44 )\n( succ 44 45 )\n( succ 45 46 )\n( succ 46 47 )\n( succ 47 48 )\n( succ 48 49 )\n( add1row 1 2 )\n( add1row 2 3 )\n( add1row 3 4 )\n( add1row 4 5 )\n( add1row 5 6 )\n( add1row 6 7 )\n( add2row 1 3 )\n( add2row 2 4 )\n( add2row 3 5 )\n( add2row 4 6 )\n( add2row 5 7 )\n( add1col 1 2 )\n( add1col 2 3 )\n( add1col 3 4 )\n( add1col 4 5 )\n( add1col 5 6 )\n( add1col 6 7 )\n( add2col 1 3 )\n( add2col 2 4 )\n( add2col 3 5 )\n( add2col 4 6 )\n( add2col 5 7 )\n( scoremap 0 0 )\n( scoremap 1 0 )\n( scoremap 2 0 )\n( scoremap 3 0 )\n( scoremap 4 0 )\n( scoremap 5 0 )\n( scoremap 6 0 )\n( scoremap 7 0 )\n( scoremap 8 0 )\n( scoremap 9 1 )\n( scoremap 10 1 )\n( scoremap 11 1 )\n( scoremap 12 2 )\n( scoremap 13 2 )\n( scoremap 14 3 )\n( scoremap 15 3 )\n( scoremap 16 4 )\n( scoremap 17 5 )\n( scoremap 18 6 )\n( scoremap 19 7 )\n( scoremap 20 8 )\n( scoremap 21 9 )\n( scoremap 22 11 )\n( scoremap 23 12 )\n( scoremap 24 14 )\n( scoremap 25 15 )\n( scoremap 26 17 )\n( scoremap 27 19 )\n( scoremap 28 21 )\n( scoremap 29 23 )\n( scoremap 30 26 )\n( scoremap 31 28 )\n( scoremap 32 31 )\n( scoremap 33 34 )\n( scoremap 34 37 )\n( scoremap 35 40 )\n( scoremap 36 43 )\n( scoremap 37 47 )\n( scoremap 38 51 )\n( scoremap 39 55 )\n( scoremap 40 59 )\n( scoremap 41 63 )\n( scoremap 42 68 )\n( scoremap 43 72 )\n( scoremap 44 77 )\n( scoremap 45 83 )\n( scoremap 46 88 )\n( scoremap 47 94 )\n( scoremap 48 100 )\n"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051044890",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Building propnet"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045117",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after anon prop removal: 2810"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045153",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after unreachable removal: 2799"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045158",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 58 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045158",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after first pass redundant components removal: 2743"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045164",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Net components removed by input->output factorization: 970"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045165",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Fanout reduction by factorization of size: 0 at a cost of 0 gates"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045165",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after large gate refactoring: 1773"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045170",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 158 duplicate components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045170",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after duplicate removal: 1615"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045178",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after input set optimization: 1664"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045180",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after inverted input optimization: 1664"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045182",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 16 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045182",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components after further removal of redundant components: 1650"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045185",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components: 1650 with an average of 1 inputs."
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045185",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num multi-input components: 542 with an average of 3 inputs."
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472051045191",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 724"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.FactorAnalyser",
+    "timestamp":"1472051045193",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reloading control set: ( ( true ( step 28 ) ), ( true ( step 2 ) ), ( true ( step 33 ) ), ( true ( step 3 ) ), ( true ( step 44 ) ), ( true ( step 27 ) ), ( true ( step 8 ) ), ( true ( step 40 ) ), ( true ( step 1 ) ), ( true ( step 17 ) ), ( true ( step 25 ) ), ( true ( step 12 ) ), ( true ( step 21 ) ), ( true ( step 6 ) ), ( true ( step 7 ) ), ( true ( step 34 ) ), ( true ( step 23 ) ), ( true ( step 29 ) ), ( true ( step 47 ) ), ( true ( step 5 ) ), ( true ( step 22 ) ), ( true ( step 48 ) ), ( true ( step 45 ) ), ( true ( step 19 ) ), ( true ( step 38 ) ), ( true ( step 49 ) ), ( true ( step 24 ) ), ( true ( step 11 ) ), ( true ( step 32 ) ), ( true ( step 42 ) ), ( true ( step 9 ) ), ( true ( step 15 ) ), ( true ( step 46 ) ), ( true ( step 26 ) ), ( true ( step 18 ) ), ( true ( step 37 ) ), ( true ( step 39 ) ), ( true ( step 43 ) ), ( true ( step 4 ) ), ( true ( step 31 ) ), ( true ( step 30 ) ), ( true ( step 10 ) ), ( true ( step 20 ) ), ( true ( step 16 ) ), ( true ( step 36 ) ), ( true ( step 41 ) ), ( true ( step 14 ) ), ( true ( step 35 ) ), ( true ( step 13 ) ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045277",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reducing with respect to XSentence: ( true ( cell 4 5 knight ) )"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045277",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( cell 4 5 knight ) ) to value: true"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045282",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 55 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045287",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045287",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Reverting OSentence optimizations"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045293",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( cell 4 5 knight ) ) to value: true"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045297",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 55 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045302",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045302",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Hardwire base prop ( true ( cell 4 5 knight ) ) to value: false"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045307",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 64 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045311",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045316",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045316",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components remaining in X-net: 1549"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045316",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components remaining in O-net: 1531"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045327",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 9 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045331",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045335",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 9 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045339",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 5 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045343",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 594 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045343",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045344",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045348",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 590 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045348",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.factory.OptimizingPolymorphicPropNetFactory",
+    "timestamp":"1472051045348",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Removed 2 redundant components"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045348",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal-less X-net: 1508"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045348",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal-less O-net: 1490"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045348",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in goal net:        91"
+  },
+  {
+    "logger":"org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine",
+    "timestamp":"1472051045348",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Num components in terminality net: 2"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472051045353",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 649"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472051045360",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 645"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472051045361",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 4"
+  },
+  {
+    "logger":"org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropnetFastAnimator",
+    "timestamp":"1472051045362",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Animator instance state vector size: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"This is Sancho 1.61d with last commit b573590fa4a633e2a3cd1355aad3cfe4b8095d5b"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Running with machine-specific properties:"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tSAFETY_MARGIN = 3300 (default: 2500)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tCREATING_DATABASE = false (default: false)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tWC_LOCATION = C:\/Personal\/Projects\/GGP\/ggp-base (default: null)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tCPU_INTENSIVE_THREADS = 4 (default: -1)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.MachineSpecificConfiguration",
+    "timestamp":"1472051045363",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"\tUSE_AFFINITY = false (default: true)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Start clock: 120s"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Play clock:  30s"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"We are:      robot"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Considering saved plan: move 1 1 2 3,move 2 3 1 5,move 1 5 2 7,move 2 7 4 6,move 4 6 6 7,move 6 7 7 5,move 7 5 6 3,move 6 3 5 1,move 5 1 7 2,move 7 2 6 4,move 6 4 7 6,move 7 6 5 7,move 5 7 3 6,move 3 6 1 7,move 1 7 2 5,move 2 5 4 4,move 4 4 3 2,move 3 2 1 3,move 1 3 2 1,move 2 1 3 3,move 3 3 4 1,move 4 1 6 2,move 6 2 4 3,move 4 3 5 5,move 5 5 7 4,move 7 4 6 6,move 6 6 5 4,move 5 4 4 2,move 4 2 6 1,move 6 1 7 3,move 7 3 6 5,move 6 5 7 7,move 7 7 5 6,move 5 6 3 7,move 3 7 4 5,move 4 5 5 3,move 5 3 3 4,move 3 4 2 2,move 2 2 1 4,move 1 4 2 6,move 2 6 4 7,move 4 7 3 5,move 3 5 1 6,move 1 6 2 4,move 2 4 1 2,move 1 2 3 1,move 3 1 5 2,move 5 2 7 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051045374",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Ready to play"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051046715",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051646715"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051046715",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 1 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051046715",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051046716",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 1 2 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051046716",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051048413",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051648413"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048413",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 1: [( move 1 1 2 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048413",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 1 2 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048413",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 2 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048413",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048414",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 3 1 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051048414",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051049612",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051649612"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 2: [( move 2 3 1 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 3 1 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 3 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 5 2 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051049612",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051050954",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051650954"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 3: [( move 1 5 2 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 5 2 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 4 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 7 4 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051050954",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051052298",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051652298"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 4: [( move 2 7 4 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 7 4 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 5 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 6 6 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051052298",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051053653",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051653653"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 5: [( move 4 6 6 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 6 6 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 6 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 7 7 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051053653",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051054988",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051654988"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054988",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 6: [( move 6 7 7 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054989",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 7 7 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054989",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 7 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054989",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054989",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 5 6 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051054989",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051056335",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051656335"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 7: [( move 7 5 6 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 5 6 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 8 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 3 5 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051056335",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051057674",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051657674"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 8: [( move 6 3 5 1 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 3 5 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 9 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 1 7 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051057674",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051059010",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051659010"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 9: [( move 5 1 7 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 1 7 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 10 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 2 6 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051059010",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051060354",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051660354"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 10: [( move 7 2 6 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 2 6 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 11 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 4 7 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051060354",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051061696",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051661696"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 11: [( move 6 4 7 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 4 7 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 12 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 6 5 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051061696",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051063029",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051663029"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 12: [( move 7 6 5 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 6 5 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 13 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 7 3 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051063029",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051064455",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051664455"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064455",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 13: [( move 5 7 3 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064455",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 7 3 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064455",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 14 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064455",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064456",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 6 1 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051064456",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051065987",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051665987"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065987",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 14: [( move 3 6 1 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065988",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 6 1 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065988",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 15 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065988",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065988",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 7 2 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051065988",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051067451",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051667451"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 15: [( move 1 7 2 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 7 2 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 16 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 5 4 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051067451",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051068793",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051668793"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 16: [( move 2 5 4 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 5 4 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 17 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 4 3 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051068793",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051070130",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051670130"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070130",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 17: [( move 4 4 3 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070130",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 4 3 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070130",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 18 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070130",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070131",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 2 1 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051070131",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051071476",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051671476"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 18: [( move 3 2 1 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 2 1 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 19 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 3 2 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051071477",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051072809",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051672809"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072809",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 19: [( move 1 3 2 1 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072809",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 3 2 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072809",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 20 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072809",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072810",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 1 3 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051072810",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051074152",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051674151"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 20: [( move 2 1 3 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 1 3 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 21 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 3 4 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051074152",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051075690",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051675690"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 21: [( move 3 3 4 1 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 3 4 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 22 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 1 6 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051075690",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051076896",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051676896"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076896",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 22: [( move 4 1 6 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076897",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 1 6 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076897",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 23 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076897",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076897",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 2 4 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051076897",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051078236",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051678236"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 23: [( move 6 2 4 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 2 4 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 24 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 3 5 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051078236",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051079567",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051679567"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 24: [( move 4 3 5 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 3 5 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 25 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 5 7 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051079568",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051080910",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051680910"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080910",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 25: [( move 5 5 7 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080910",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 5 7 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080910",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 26 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080910",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080911",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 4 6 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051080911",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051082249",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051682249"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082249",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 26: [( move 7 4 6 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082249",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 4 6 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082249",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 27 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082249",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082250",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 6 5 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051082250",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051083585",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051683585"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 27: [( move 6 6 5 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 6 5 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 28 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 4 4 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051083585",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051084917",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051684917"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 28: [( move 5 4 4 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 4 4 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 29 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 2 6 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051084917",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051086256",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051686256"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 29: [( move 4 2 6 1 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 2 6 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 30 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 1 7 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051086256",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051087596",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051687596"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 30: [( move 6 1 7 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 1 7 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 31 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 3 6 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051087596",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051088928",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051688928"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 31: [( move 7 3 6 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 3 6 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 32 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 6 5 7 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051088928",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051090270",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051690270"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 32: [( move 6 5 7 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 6 5 7 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 33 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 7 7 5 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051090270",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051091610",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051691610"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 33: [( move 7 7 5 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 7 7 5 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 34 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 6 3 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051091610",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051092956",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051692956"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 34: [( move 5 6 3 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 6 3 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 35 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 7 4 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051092956",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051094303",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051694303"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 35: [( move 3 7 4 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 7 4 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 36 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 5 5 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051094303",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051095645",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051695645"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 36: [( move 4 5 5 3 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 5 5 3 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 37 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 3 3 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051095645",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051096982",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051696982"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 37: [( move 5 3 3 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 5 3 3 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 38 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 4 2 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051096982",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051098325",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051698325"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 38: [( move 3 4 2 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 4 2 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 39 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 2 1 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051098325",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051099664",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051699664"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 39: [( move 2 2 1 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 2 1 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 40 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 4 2 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051099664",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051101006",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051701006"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 40: [( move 1 4 2 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 4 2 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 41 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 6 4 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051101006",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051102339",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051702339"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 41: [( move 2 6 4 7 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 6 4 7 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 42 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 4 7 3 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051102339",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051103676",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051703676"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 42: [( move 4 7 3 5 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 4 7 3 5 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 43 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 5 1 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051103676",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051105021",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051705021"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105021",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 43: [( move 3 5 1 6 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105021",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 5 1 6 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105021",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 44 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105021",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105022",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 6 2 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051105022",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051106360",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051706360"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 44: [( move 1 6 2 4 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 6 2 4 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 45 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 2 4 1 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051106360",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051107703",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051707703"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107703",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 45: [( move 2 4 1 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107703",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 2 4 1 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107703",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 46 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107703",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107704",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 1 2 3 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051107704",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051109037",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051709037"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 46: [( move 1 2 3 1 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 1 2 3 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 47 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 3 1 5 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051109037",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 0"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051110373",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog won't fire until: 1472051710373"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Moves played for turn 47: [( move 3 1 5 2 )]"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Non-null move last turn was: ( move 3 1 5 2 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110373",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"> > > > > Starting turn 48 < < < < <"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110373",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Calculating current state"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110374",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Playing pre-planned move: ( move 5 2 7 1 )"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051110374",
+    "level":"DEBUG",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Move took: 1"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051111706",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Final score: 100"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.GameSearcher",
+    "timestamp":"1472051111706",
+    "level":"INFO",
+    "thread":"Search Processor",
+    "message":"Terminating GameSearcher (mTerminateRequested = true)"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051111833",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Stop the watchdog"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Watchdog",
+    "timestamp":"1472051111833",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Watchdog terminated"
+  },
+  {
+    "logger":"org.ggp.base.player.gamer.statemachine.sancho.Sancho",
+    "timestamp":"1472051114847",
+    "level":"INFO",
+    "thread":"GamePlayer - Sancho 1.61d (9147)",
+    "message":"Tidy-up complete"
+  }

@@ -1,0 +1,384 @@
+2016-08-24 16:46:51,248 INFO  RequestFactory                 ======================================================
+2016-08-24 16:46:51,248 INFO  RequestFactory                 Beginning new game: x1472046730066
+2016-08-24 16:46:51,248 INFO  RequestFactory                 Logs available at:  http://localhost:9199/localview/x1472046730066
+2016-08-24 16:46:51,744 WARN  GDLTranslator                  Unrecognised game.  Created new game directory: C:\Personal\Projects\GGP\ggp-base\data\games\1472053611744
+2016-08-24 16:46:51,751 DEBUG Watchdog                       Watchdog won't fire until: 1472054211751
+2016-08-24 16:46:51,792 DEBUG dDeadReckonPropnetStateMachine GDL
+( role robot )
+( base p )
+( base q1 )
+( base q2 )
+( base q3 )
+( base q4 )
+( base q5 )
+( base q6 )
+( base q7 )
+( base q8 )
+( base q9 )
+( base q10 )
+( base ( step 1 ) )
+( base ( step 2 ) )
+( base ( step 3 ) )
+( base ( step 4 ) )
+( base ( step 5 ) )
+( base ( step 6 ) )
+( base ( step 7 ) )
+( base ( step 8 ) )
+( base ( step 9 ) )
+( base ( step 10 ) )
+( input robot 1 )
+( input robot 2 )
+( input robot 3 )
+( input robot 4 )
+( input robot 5 )
+( input robot 6 )
+( input robot 7 )
+( input robot 8 )
+( input robot 9 )
+( input robot 10 )
+( init q1 )
+( init ( step 1 ) )
+( legal robot 1 )
+( legal robot 2 )
+( legal robot 3 )
+( legal robot 4 )
+( legal robot 5 )
+( legal robot 6 )
+( legal robot 7 )
+( legal robot 8 )
+( legal robot 9 )
+( legal robot 10 )
+( <= ( next p ) ( true p ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 10 ) ( true ( step 1 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 10 ) ( true ( step 2 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 10 ) ( true ( step 3 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 10 ) ( true ( step 4 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 5 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 6 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 7 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 9 ) ( true ( step 8 ) ) )
+( <= ( next p ) ( does robot 1 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 2 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 3 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 4 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 5 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 6 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 7 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 8 ) ( true ( step 9 ) ) )
+( <= ( next p ) ( does robot 10 ) ( true ( step 9 ) ) )
+( <= ( next q1 ) ( does robot 1 ) )
+( <= ( next q1 ) ( does robot 2 ) )
+( <= ( next q1 ) ( does robot 3 ) )
+( <= ( next q1 ) ( does robot 4 ) )
+( <= ( next q1 ) ( does robot 5 ) )
+( <= ( next q1 ) ( does robot 6 ) )
+( <= ( next q1 ) ( does robot 7 ) )
+( <= ( next q1 ) ( does robot 8 ) )
+( <= ( next q1 ) ( does robot 9 ) )
+( <= ( next q1 ) ( does robot 10 ) )
+( <= ( next q2 ) ( does robot 9 ) ( not ( true p ) ) ( true q1 ) )
+( <= ( next q3 ) ( does robot 8 ) ( not ( true p ) ) ( true q2 ) )
+( <= ( next q4 ) ( does robot 1 ) ( not ( true p ) ) ( true q3 ) )
+( <= ( next q5 ) ( does robot 1 ) ( not ( true p ) ) ( true q4 ) )
+( <= ( next q6 ) ( does robot 10 ) ( not ( true p ) ) ( true q5 ) )
+( <= ( next q7 ) ( does robot 10 ) ( not ( true p ) ) ( true q6 ) )
+( <= ( next q8 ) ( does robot 10 ) ( not ( true p ) ) ( true q7 ) )
+( <= ( next q9 ) ( does robot 10 ) ( not ( true p ) ) ( true q8 ) )
+( <= ( next q10 ) ( does robot 9 ) ( not ( true p ) ) ( true q9 ) )
+( <= ( next ( step ?N ) ) ( true ( step ?M ) ) ( successor ?M ?N ) )
+( <= ( goal robot 100 ) ( true q10 ) )
+( <= ( goal robot 0 ) ( not ( true q10 ) ) )
+( <= terminal ( true ( step 10 ) ) )
+( successor 1 2 )
+( successor 2 3 )
+( successor 3 4 )
+( successor 4 5 )
+( successor 5 6 )
+( successor 6 7 )
+( successor 7 8 )
+( successor 8 9 )
+( successor 9 10 )
+
+2016-08-24 16:46:51,792 DEBUG izingPolymorphicPropNetFactory Building propnet
+2016-08-24 16:46:51,850 DEBUG dDeadReckonPropnetStateMachine Num components after anon prop removal: 164
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after unreachable removal: 167
+2016-08-24 16:46:51,851 DEBUG izingPolymorphicPropNetFactory Removed 6 redundant components
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after first pass redundant components removal: 163
+2016-08-24 16:46:51,851 DEBUG izingPolymorphicPropNetFactory Net components removed by input->output factorization: 0
+2016-08-24 16:46:51,851 DEBUG izingPolymorphicPropNetFactory Fanout reduction by factorization of size: 0 at a cost of 0 gates
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after large gate refactoring: 163
+2016-08-24 16:46:51,851 DEBUG izingPolymorphicPropNetFactory Removed 0 duplicate components
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after duplicate removal: 163
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after input set optimization: 163
+2016-08-24 16:46:51,851 DEBUG dDeadReckonPropnetStateMachine Num components after inverted input optimization: 163
+2016-08-24 16:46:51,852 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:46:51,852 DEBUG dDeadReckonPropnetStateMachine Num components after further removal of redundant components: 163
+2016-08-24 16:46:51,852 DEBUG dDeadReckonPropnetStateMachine Num components: 163 with an average of 2 inputs.
+2016-08-24 16:46:51,852 DEBUG dDeadReckonPropnetStateMachine Num multi-input components: 92 with an average of 3 inputs.
+2016-08-24 16:46:51,852 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 112
+2016-08-24 16:46:51,853 INFO  FactorAnalyser                 Performing factor analysis
+2016-08-24 16:46:51,854 INFO  FactorAnalyser                 Control set: [( true ( step 2 ) )(false), ( true q1 )(false), ( true ( step 9 ) )(false), ( true ( step 7 ) )(false), ( true ( step 10 ) )(false), ( true ( step 6 ) )(false), ( true ( step 1 ) )(false), ( true ( step 4 ) )(false), ( true ( step 3 ) )(false), ( true ( step 5 ) )(false), ( true ( step 8 ) )(false)]
+2016-08-24 16:46:51,857 INFO  dDeadReckonPropnetStateMachine Reducing with respect to XSentence: ( true ( step 6 ) )
+2016-08-24 16:46:51,857 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( step 6 ) ) to value: true
+2016-08-24 16:46:51,857 DEBUG izingPolymorphicPropNetFactory Removed 15 redundant components
+2016-08-24 16:46:51,858 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,858 DEBUG dDeadReckonPropnetStateMachine Possible OSentence: ( true ( step 7 ) )
+2016-08-24 16:46:51,858 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( step 7 ) ) to value: true
+2016-08-24 16:46:51,858 DEBUG izingPolymorphicPropNetFactory Removed 15 redundant components
+2016-08-24 16:46:51,859 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,859 DEBUG dDeadReckonPropnetStateMachine Fails to recover back-transition to ( true ( step 6 ) )
+2016-08-24 16:46:51,859 DEBUG dDeadReckonPropnetStateMachine Reverting OSentence optimizations
+2016-08-24 16:46:51,860 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( step 6 ) ) to value: true
+2016-08-24 16:46:51,860 DEBUG izingPolymorphicPropNetFactory Removed 15 redundant components
+2016-08-24 16:46:51,861 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,861 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( step 6 ) ) to value: false
+2016-08-24 16:46:51,861 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,862 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,862 DEBUG dDeadReckonPropnetStateMachine Num components remaining in X-net: 151
+2016-08-24 16:46:51,862 DEBUG dDeadReckonPropnetStateMachine Num components remaining in O-net: 152
+2016-08-24 16:46:51,863 DEBUG izingPolymorphicPropNetFactory Removed 6 redundant components
+2016-08-24 16:46:51,863 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,863 DEBUG izingPolymorphicPropNetFactory Removed 6 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 97 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 96 redundant components
+2016-08-24 16:46:51,864 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:46:51,865 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:46:51,865 INFO  dDeadReckonPropnetStateMachine Num components in goal-less X-net: 148
+2016-08-24 16:46:51,865 INFO  dDeadReckonPropnetStateMachine Num components in goal-less O-net: 149
+2016-08-24 16:46:51,865 INFO  dDeadReckonPropnetStateMachine Num components in goal net:        5
+2016-08-24 16:46:51,865 INFO  dDeadReckonPropnetStateMachine Num components in terminality net: 2
+2016-08-24 16:46:51,865 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 101
+2016-08-24 16:46:51,866 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 100
+2016-08-24 16:46:51,866 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 2
+2016-08-24 16:46:51,866 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 0
+2016-08-24 16:46:51,866 INFO  Sancho                         This is Sancho 1.61d with last commit b573590fa4a633e2a3cd1355aad3cfe4b8095d5b
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   Running with machine-specific properties:
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   	SAFETY_MARGIN = 3300 (default: 2500)
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   	CREATING_DATABASE = false (default: false)
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   	WC_LOCATION = C:/Personal/Projects/GGP/ggp-base (default: null)
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   	CPU_INTENSIVE_THREADS = 4 (default: -1)
+2016-08-24 16:46:51,866 INFO  MachineSpecificConfiguration   	USE_AFFINITY = false (default: true)
+2016-08-24 16:46:51,886 INFO  Sancho                         Start clock: 120s
+2016-08-24 16:46:51,886 INFO  Sancho                         Play clock:  30s
+2016-08-24 16:46:51,886 INFO  Sancho                         We are:      robot
+2016-08-24 16:46:51,902 DEBUG LatchAnalyser                  Goal '( goal robot 0 )' is positively latched by any of: ( ( true p ) )
+2016-08-24 16:46:51,902 DEBUG LatchAnalyser                  Goal '( goal robot 100 )' is negatively latched by any of: ( ( true p ) )
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                  Latch analysis results
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    1 positive base latches: ( ( true p ) )
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    2 negative base latches: ( ( true ( step 1 ) ), ( true ( step 2 ) ) )
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    1 simple positive goal latches
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    1 simple negative goal latches
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    0 complex positive goal latches
+2016-08-24 16:46:51,902 INFO  LatchAnalyser                    All roles have positive goal latches
+2016-08-24 16:46:51,903 DEBUG PartitionedChoiceAnalyser      Found required positive base props for win:
+2016-08-24 16:46:51,903 DEBUG PartitionedChoiceAnalyser      	( true q10 )(false)
+2016-08-24 16:46:51,904 INFO  PayoffMatrixGamePlayer         Not suitable for PayoffMatrixGamePlayer: Not a 2-player game
+2016-08-24 16:46:51,907 DEBUG CombinedHeuristic              CombinedHeuristic: Adding PieceHeuristic
+2016-08-24 16:46:51,907 DEBUG CombinedHeuristic              CombinedHeuristic: Adding MajorityGoalsHeuristic
+2016-08-24 16:46:51,907 DEBUG CombinedHeuristic              CombinedHeuristic: Adding GoalsStabilityHeuristic
+2016-08-24 16:46:51,908 DEBUG CombinedHeuristic              CombinedHeuristic: Removing disabled MajorityGoalsHeuristic
+2016-08-24 16:47:49,328 DEBUG CombinedHeuristic              CombinedHeuristic: Removing disabled PieceHeuristic
+2016-08-24 16:47:49,328 DEBUG CombinedHeuristic              CombinedHeuristic: Removing disabled GoalsStabilityHeuristic
+2016-08-24 16:47:49,328 INFO  CombinedHeuristic              No heuristics enabled
+2016-08-24 16:47:49,328 INFO  Sancho                         Performed 4012481 simulations to calculate heuristics
+2016-08-24 16:47:59,328 INFO  Sancho                         branchingFactorApproximation = 10.0, averageBranchingFactor = 10.0, choices high water mark = 10
+2016-08-24 16:47:59,328 INFO  Sancho                         Did 171270 simulations for game characteristics
+2016-08-24 16:47:59,328 INFO  GameCharacteristics            Fixed characteristics
+2016-08-24 16:47:59,328 INFO  GameCharacteristics              May be an iterated game
+2016-08-24 16:47:59,328 INFO  GameCharacteristics              Game is a pseudo puzzle
+2016-08-24 16:47:59,328 INFO  GameCharacteristics              Game is not a simultaneous turn game
+2016-08-24 16:47:59,328 INFO  GameCharacteristics              Game is a 1-player puzzle
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics     Statistical characteristics
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Range of lengths of sample games seen:          [9,9]
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Average num turns:                              9.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Std deviation num turns:                        0.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Average num turns for non-drawn result:         9.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Average hyper-sequence length:                  8.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Variance in hyper-sequence length:              0.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Goals stability:                                1.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Proportion of max length games ending in draws: 0.0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Num factors:                                    1
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       Max factor failure time (ms)                    0
+2016-08-24 16:47:59,328 INFO  RuntimeGameCharacteristics       IsFixedSum                                      true
+2016-08-24 16:47:59,328 INFO  Sancho                         Measured goal volatility is 0.0 [monotonic]
+2016-08-24 16:47:59,328 INFO  Sancho                         Not enabled Goal Greedy policy for pseudo puzzle with insufficient monotonic goal volatility
+2016-08-24 16:47:59,328 INFO  CombinedHeuristic              Using advanced heuristic mechanism
+2016-08-24 16:47:59,328 INFO  GameSearcher                   Set explorationBias range to [0.96, 1.44]
+2016-08-24 16:47:59,328 INFO  Sancho                         Estimated greedy rollout cost: 0.0
+2016-08-24 16:47:59,329 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 99
+2016-08-24 16:47:59,330 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 98
+2016-08-24 16:47:59,330 INFO  Sancho                         Min raw score = 100, max = 100
+2016-08-24 16:47:59,330 INFO  Sancho                         multiRoleAverageScoreDiff = 0
+2016-08-24 16:47:59,330 INFO  Sancho                         No score discrimination seen during simulation - resetting to [0,100]
+2016-08-24 16:47:59,330 INFO  Sancho                         Game is a puzzle so not normalizing scores
+2016-08-24 16:47:59,330 INFO  Sancho                         Not using RAVE
+2016-08-24 16:47:59,330 INFO  Sancho                         Performed 171270 simulations in 10000ms
+2016-08-24 16:47:59,330 INFO  Sancho                         17127 simulations/second performed - setting rollout sample size to 1
+2016-08-24 16:48:04,329 INFO  dDeadReckonPropnetStateMachine Iterations in 2499 ms with/without removal before adding: 3828989/3840070
+2016-08-24 16:48:04,329 INFO  dDeadReckonPropnetStateMachine Speed improvement insufficient to justify 2-pass prop setting
+2016-08-24 16:48:04,330 DEBUG Pipeline                       Per-rollout-thread pipeline size = 8
+2016-08-24 16:48:04,333 INFO  GameSearcher                   Not using greedy rollouts
+2016-08-24 16:48:04,334 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 99
+2016-08-24 16:48:04,335 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 98
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Hyper expansion processing is not enabled
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Weight decay disabled
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Expand-after-visits threshold set to 0
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Not using periodic node score normalization
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Using UCB-tuned
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Early cutoff disabled
+2016-08-24 16:48:04,350 INFO  MCTSTree                       Mixi-max selection disabled
+2016-08-24 16:48:04,437 INFO  MCTSTree                       Estimated initial values for nodes with no play-throughs is enabled
+2016-08-24 16:48:04,440 INFO  GameSearcher                   This game is not suitable for local search
+2016-08-24 16:48:04,445 INFO  GameSearcher                   Not using RAVE
+2016-08-24 16:48:04,445 INFO  GameSearcher                   MCTS iterations last turn = 0
+2016-08-24 16:48:04,445 DEBUG GameSearcher                   Start move search...
+2016-08-24 16:48:04,445 INFO  MCTSTree                       Encountered childless root - must re-expand
+2016-08-24 16:48:04,445 INFO  MCTSTree                       Root has 10 children, and is not complete
+2016-08-24 16:48:04,445 INFO  GameSearcher                   Move search started
+2016-08-24 16:48:04,445 INFO  GameSearcher                   Starting sample size update timer
+2016-08-24 16:48:04,446 DEBUG MCTSTree                       Max select time seen (ms): 1
+2016-08-24 16:48:04,446 DEBUG MCTSTree                       Max expand time seen (ms): 0
+2016-08-24 16:48:04,447 INFO  GameSearcher                   New minimum game length observed: 3
+2016-08-24 16:48:04,449 INFO  GamePlan                       Cached new best plan: [9, 8, 1, 1, 10, 10, 10, 10, 9]
+2016-08-24 16:48:04,450 DEBUG MCTSTree                       Max expand time seen (ms): 0
+2016-08-24 16:48:04,450 INFO  TreeNode                       Mark root complete
+2016-08-24 16:48:04,450 DEBUG TreeNode                       Score at root: 100.0
+2016-08-24 16:48:04,450 DEBUG TreeNode                       State at root: ( ( true ( step 1 ) ), ( true q1 ) )
+2016-08-24 16:48:04,450 INFO  GameSearcher                   Move search complete: mTerminateRequested = false, complete = true
+2016-08-24 16:48:04,695 INFO  Sancho                         Early search termination because root is complete
+2016-08-24 16:48:04,695 INFO  Sancho                         Ready to play
+2016-08-24 16:48:06,016 DEBUG Watchdog                       Watchdog won't fire until: 1472054286016
+2016-08-24 16:48:06,016 INFO  Sancho                         > > > > > Starting turn 1 < < < < <
+2016-08-24 16:48:06,016 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:06,016 INFO  Sancho                         Playing pre-planned move: 9
+2016-08-24 16:48:06,016 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:07,350 DEBUG Watchdog                       Watchdog won't fire until: 1472054287350
+2016-08-24 16:48:07,350 INFO  Sancho                         Moves played for turn 1: [9]
+2016-08-24 16:48:07,350 INFO  Sancho                         Non-null move last turn was: 9
+2016-08-24 16:48:07,350 INFO  Sancho                         > > > > > Starting turn 2 < < < < <
+2016-08-24 16:48:07,350 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:07,350 INFO  Sancho                         Playing pre-planned move: 8
+2016-08-24 16:48:07,350 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:08,676 DEBUG Watchdog                       Watchdog won't fire until: 1472054288676
+2016-08-24 16:48:08,676 INFO  Sancho                         Moves played for turn 2: [8]
+2016-08-24 16:48:08,676 INFO  Sancho                         Non-null move last turn was: 8
+2016-08-24 16:48:08,676 INFO  Sancho                         > > > > > Starting turn 3 < < < < <
+2016-08-24 16:48:08,676 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:08,676 INFO  Sancho                         Playing pre-planned move: 1
+2016-08-24 16:48:08,676 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:10,001 DEBUG Watchdog                       Watchdog won't fire until: 1472054290001
+2016-08-24 16:48:10,001 INFO  Sancho                         Moves played for turn 3: [1]
+2016-08-24 16:48:10,001 INFO  Sancho                         Non-null move last turn was: 1
+2016-08-24 16:48:10,001 INFO  Sancho                         > > > > > Starting turn 4 < < < < <
+2016-08-24 16:48:10,001 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:10,001 INFO  Sancho                         Playing pre-planned move: 1
+2016-08-24 16:48:10,001 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:11,323 DEBUG Watchdog                       Watchdog won't fire until: 1472054291323
+2016-08-24 16:48:11,323 INFO  Sancho                         Moves played for turn 4: [1]
+2016-08-24 16:48:11,323 INFO  Sancho                         Non-null move last turn was: 1
+2016-08-24 16:48:11,323 INFO  Sancho                         > > > > > Starting turn 5 < < < < <
+2016-08-24 16:48:11,323 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:11,323 INFO  Sancho                         Playing pre-planned move: 10
+2016-08-24 16:48:11,324 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:12,652 DEBUG Watchdog                       Watchdog won't fire until: 1472054292652
+2016-08-24 16:48:12,652 INFO  Sancho                         Moves played for turn 5: [10]
+2016-08-24 16:48:12,652 INFO  Sancho                         Non-null move last turn was: 10
+2016-08-24 16:48:12,652 INFO  Sancho                         > > > > > Starting turn 6 < < < < <
+2016-08-24 16:48:12,652 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:12,652 INFO  Sancho                         Playing pre-planned move: 10
+2016-08-24 16:48:12,652 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:14,052 DEBUG Watchdog                       Watchdog won't fire until: 1472054294052
+2016-08-24 16:48:14,052 INFO  Sancho                         Moves played for turn 6: [10]
+2016-08-24 16:48:14,052 INFO  Sancho                         Non-null move last turn was: 10
+2016-08-24 16:48:14,052 INFO  Sancho                         > > > > > Starting turn 7 < < < < <
+2016-08-24 16:48:14,052 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:14,052 INFO  Sancho                         Playing pre-planned move: 10
+2016-08-24 16:48:14,052 DEBUG Sancho                         Move took: 0
+2016-08-24 16:48:15,520 DEBUG Watchdog                       Watchdog won't fire until: 1472054295520
+2016-08-24 16:48:15,520 INFO  Sancho                         Moves played for turn 7: [10]
+2016-08-24 16:48:15,520 INFO  Sancho                         Non-null move last turn was: 10
+2016-08-24 16:48:15,520 INFO  Sancho                         > > > > > Starting turn 8 < < < < <
+2016-08-24 16:48:15,521 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:15,521 INFO  Sancho                         Playing pre-planned move: 10
+2016-08-24 16:48:15,521 DEBUG Sancho                         Move took: 1
+2016-08-24 16:48:16,975 DEBUG Watchdog                       Watchdog won't fire until: 1472054296975
+2016-08-24 16:48:16,975 INFO  Sancho                         Moves played for turn 8: [10]
+2016-08-24 16:48:16,975 INFO  Sancho                         Non-null move last turn was: 10
+2016-08-24 16:48:16,975 INFO  Sancho                         > > > > > Starting turn 9 < < < < <
+2016-08-24 16:48:16,975 DEBUG Sancho                         Calculating current state
+2016-08-24 16:48:16,975 INFO  Sancho                         Playing pre-planned move: 9
+2016-08-24 16:48:16,976 DEBUG Sancho                         Move took: 1
+2016-08-24 16:48:18,317 INFO  Sancho                         Final score: 100
+2016-08-24 16:48:18,318 INFO  RolloutProcessorPool           Stop rollout processors
+2016-08-24 16:48:18,319 INFO  RolloutProcessorPool           Finished stopping rollout processors
+2016-08-24 16:48:18,360 INFO  GameSearcher                   Terminating GameSearcher (mTerminateRequested = true)
+2016-08-24 16:48:18,433 INFO  Watchdog                       Stop the watchdog
+2016-08-24 16:48:18,433 INFO  Watchdog                       Watchdog terminated
+2016-08-24 16:48:21,462 INFO  Sancho                         Tidy-up complete

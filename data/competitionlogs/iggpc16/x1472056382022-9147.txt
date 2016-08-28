@@ -1,0 +1,134 @@
+2016-08-24 17:51:18,956 INFO  RequestFactory                 ======================================================
+2016-08-24 17:51:18,956 INFO  RequestFactory                 Beginning new game: x1472056382022
+2016-08-24 17:51:18,956 INFO  RequestFactory                 Logs available at:  http://localhost:9199/localview/x1472056382022
+2016-08-24 17:51:19,004 WARN  GDLTranslator                  Unrecognised game.  Created new game directory: C:\Personal\Projects\GGP\ggp-base\data\games\1472057479004
+2016-08-24 17:51:19,009 DEBUG Watchdog                       Watchdog won't fire until: 1472058079009
+2016-08-24 17:51:19,053 DEBUG dDeadReckonPropnetStateMachine GDL
+( role robot )
+( board 1 )
+( board 2 )
+( board 3 )
+( board 4 )
+( board 5 )
+( board 6 )
+( board 7 )
+( board 8 )
+( board 9 )
+( board 10 )
+( button p )
+( button q )
+( button r )
+( base ( step 1 ) )
+( base ( step 2 ) )
+( base ( step 3 ) )
+( base ( step 4 ) )
+( base ( step 5 ) )
+( base ( step 6 ) )
+( base ( step 7 ) )
+( <= ( base ( state ?Bu ?Bo ) ) ( button ?Bu ) ( board ?Bo ) )
+( action a )
+( action b )
+( action c )
+( <= ( input robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) ( action ?A1 ) ( action ?A2 ) ( action ?A3 ) ( action ?A4 ) ( action ?A5 ) ( action ?A6 ) ( action ?A7 ) ( action ?A8 ) ( action ?A9 ) ( action ?A10 ) )
+( init ( step 1 ) )
+( action a )
+( action b )
+( action c )
+( <= ( legal robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) ( action ?A1 ) ( action ?A2 ) ( action ?A3 ) ( action ?A4 ) ( action ?A5 ) ( action ?A6 ) ( action ?A7 ) ( action ?A8 ) ( action ?A9 ) ( action ?A10 ) )
+( <= ( doesOne robot ?Action 1 ) ( does robot ( set ?Action ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 2 ) ( does robot ( set ?A1 ?Action ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 3 ) ( does robot ( set ?A1 ?A2 ?Action ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 4 ) ( does robot ( set ?A1 ?A2 ?A3 ?Action ?A5 ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 5 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?Action ?A6 ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 6 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?Action ?A7 ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 7 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?Action ?A8 ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 8 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?Action ?A9 ?A10 ) ) )
+( <= ( doesOne robot ?Action 9 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?Action ?A10 ) ) )
+( <= ( doesOne robot ?Action 10 ) ( does robot ( set ?A1 ?A2 ?A3 ?A4 ?A5 ?A6 ?A7 ?A8 ?A9 ?Action ) ) )
+( <= ( next ( state p ?Board ) ) ( doesOne robot a ?Board ) ( not ( true ( state p ?Board ) ) ) )
+( <= ( next ( state p ?Board ) ) ( doesOne robot b ?Board ) ( true ( state q ?Board ) ) )
+( <= ( next ( state p ?Board ) ) ( doesOne robot c ?Board ) ( true ( state p ?Board ) ) )
+( <= ( next ( state q ?Board ) ) ( doesOne robot a ?Board ) ( true ( state q ?Board ) ) )
+( <= ( next ( state q ?Board ) ) ( doesOne robot b ?Board ) ( true ( state p ?Board ) ) )
+( <= ( next ( state q ?Board ) ) ( doesOne robot c ?Board ) ( true ( state r ?Board ) ) )
+( <= ( next ( state r ?Board ) ) ( doesOne robot a ?Board ) ( true ( state r ?Board ) ) )
+( <= ( next ( state r ?Board ) ) ( doesOne robot b ?Board ) ( true ( state r ?Board ) ) )
+( <= ( next ( state r ?Board ) ) ( doesOne robot c ?Board ) ( true ( state q ?Board ) ) )
+( <= ( next ( step ?Y ) ) ( true ( step ?X ) ) ( successor ?X ?Y ) )
+( <= ( goal robot 0 ) ( board ?Bo ) ( button ?Bu ) ( not ( true ( state ?Bu ?Bo ) ) ) )
+( <= ( goal robot 100 ) ( not ( goal robot 0 ) ) )
+( <= ( success ?Board ) ( true ( state p ?Board ) ) ( true ( state q ?Board ) ) ( true ( state r ?Board ) ) )
+( <= terminal ( success 1 ) ( success 2 ) )
+( <= terminal ( true ( step 7 ) ) )
+( successor 1 2 )
+( successor 2 3 )
+( successor 3 4 )
+( successor 4 5 )
+( successor 5 6 )
+( successor 6 7 )
+
+2016-08-24 17:51:19,053 DEBUG izingPolymorphicPropNetFactory Building propnet
+2016-08-24 17:52:08,164 DEBUG dDeadReckonPropnetStateMachine Num components after anon prop removal: 118364
+2016-08-24 17:52:09,397 DEBUG dDeadReckonPropnetStateMachine Num components after unreachable removal: 118367
+2016-08-24 17:52:09,577 DEBUG izingPolymorphicPropNetFactory Removed 7 redundant components
+2016-08-24 17:52:09,577 DEBUG dDeadReckonPropnetStateMachine Num components after first pass redundant components removal: 118362
+2016-08-24 17:52:09,675 DEBUG izingPolymorphicPropNetFactory Net components removed by input->output factorization: 0
+2016-08-24 17:52:09,704 DEBUG izingPolymorphicPropNetFactory Fanout reduction by factorization of size: 0 at a cost of 0 gates
+2016-08-24 17:52:09,704 DEBUG dDeadReckonPropnetStateMachine Num components after large gate refactoring: 118362
+2016-08-24 17:52:09,819 DEBUG izingPolymorphicPropNetFactory Removed 0 duplicate components
+2016-08-24 17:52:09,819 DEBUG dDeadReckonPropnetStateMachine Num components after duplicate removal: 118362
+2016-08-24 17:52:10,129 DEBUG dDeadReckonPropnetStateMachine Num components after input set optimization: 118362
+2016-08-24 17:52:10,269 DEBUG dDeadReckonPropnetStateMachine Num components after inverted input optimization: 118343
+2016-08-24 17:52:10,445 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 17:52:10,446 DEBUG dDeadReckonPropnetStateMachine Num components after further removal of redundant components: 118343
+2016-08-24 17:53:19,183 DEBUG dDeadReckonPropnetStateMachine Num components: 118343 with an average of 5 inputs.
+2016-08-24 17:53:19,183 DEBUG dDeadReckonPropnetStateMachine Num multi-input components: 153 with an average of 3861 inputs.
+2016-08-24 17:53:19,347 ERROR StateMachineGamer              Exception in player during meta-gaming
+java.lang.ArrayIndexOutOfBoundsException: -32768
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536) ~[Sancho.jar:?]
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601) ~[Sancho.jar:?]
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340) ~[Sancho.jar:?]
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157) ~[Sancho.jar:?]
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214) ~[Sancho.jar:?]
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247) ~[Sancho.jar:?]
+	at org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289) ~[Sancho.jar:?]
+	at org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38) ~[Sancho.jar:?]
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204) [Sancho.jar:?]
+	at org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70) [Sancho.jar:?]
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:111) [Sancho.jar:?]
+2016-08-24 17:53:19,351 WARN  StdOutErrLog                   [GamePlayer] java.lang.ArrayIndexOutOfBoundsException: -32768
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247)
+	at org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289)
+	at org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204)
+	at org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:111)
+
+2016-08-24 17:53:19,361 WARN  StdOutErrLog                   [GamePlayer] An unhandled exception occurred during metagaming: org.ggp.base.player.gamer.exception.MetaGamingException: java.lang.ArrayIndexOutOfBoundsException: -32768
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:214)
+	at org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:70)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:111)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: -32768
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:536)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.add(ForwardDeadReckonLegalMoveSet.java:601)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonLegalMoveSet.crystalize(ForwardDeadReckonLegalMoveSet.java:340)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.setUpActivePropositionSets(ForwardDeadReckonPropNet.java:157)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:214)
+	at org.ggp.base.util.propnet.polymorphic.forwardDeadReckon.ForwardDeadReckonPropNet.crystalize(ForwardDeadReckonPropNet.java:247)
+	at org.ggp.base.util.statemachine.implementation.propnet.forwardDeadReckon.ForwardDeadReckonPropnetStateMachine.initialize(ForwardDeadReckonPropnetStateMachine.java:1289)
+	at org.ggp.base.player.gamer.statemachine.sancho.StateMachineProxy.initialize(StateMachineProxy.java:38)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:204)
+	... 2 more
+
+2016-08-24 17:53:20,070 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:21,390 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:22,714 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:24,039 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:25,360 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:26,689 WARN  StdOutErrLog                   [GamePlayer] Got play message not intended for current game: ignoring.
+2016-08-24 17:53:28,016 WARN  StdOutErrLog                   [GamePlayer] Got stop message not intended for current game: ignoring.

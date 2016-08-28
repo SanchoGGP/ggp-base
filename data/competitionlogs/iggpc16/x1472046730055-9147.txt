@@ -1,0 +1,621 @@
+2016-08-24 16:04:04,670 INFO  RequestFactory                 ======================================================
+2016-08-24 16:04:04,670 INFO  RequestFactory                 Beginning new game: x1472046730055
+2016-08-24 16:04:04,670 INFO  RequestFactory                 Logs available at:  http://localhost:9199/localview/x1472046730055
+2016-08-24 16:04:04,820 INFO  GDLTranslator                  Looks like a game of stanford.hunterbig
+2016-08-24 16:04:04,842 DEBUG Watchdog                       Watchdog won't fire until: 1472051644842
+2016-08-24 16:04:04,890 DEBUG dDeadReckonPropnetStateMachine GDL
+( role robot )
+( <= ( base ( cell ?m ?n ?p ) ) ( row ?m ) ( col ?n ) ( piece ?p ) )
+( <= ( base ( captures ?m ) ) ( scoremap ?m ?n ) )
+( <= ( base ( step ?n ) ) ( succ ?m ?n ) )
+( <= ( input robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( row ?m1 ) ( col ?n1 ) ( knightmove ?m1 ?n1 ?m2 ?n2 ) )
+( row 1 )
+( row 2 )
+( row 3 )
+( row 4 )
+( row 5 )
+( row 6 )
+( row 7 )
+( col 1 )
+( col 2 )
+( col 3 )
+( col 4 )
+( col 5 )
+( col 6 )
+( col 7 )
+( piece knight )
+( piece pawn )
+( piece blank )
+( init ( cell 1 1 knight ) )
+( init ( cell 1 2 pawn ) )
+( init ( cell 1 3 pawn ) )
+( init ( cell 1 4 pawn ) )
+( init ( cell 1 5 pawn ) )
+( init ( cell 1 6 pawn ) )
+( init ( cell 1 7 pawn ) )
+( init ( cell 2 1 pawn ) )
+( init ( cell 2 2 pawn ) )
+( init ( cell 2 3 pawn ) )
+( init ( cell 2 4 pawn ) )
+( init ( cell 2 5 pawn ) )
+( init ( cell 2 6 pawn ) )
+( init ( cell 2 7 pawn ) )
+( init ( cell 3 1 pawn ) )
+( init ( cell 3 2 pawn ) )
+( init ( cell 3 3 pawn ) )
+( init ( cell 3 4 pawn ) )
+( init ( cell 3 5 pawn ) )
+( init ( cell 3 6 pawn ) )
+( init ( cell 3 7 pawn ) )
+( init ( cell 4 1 pawn ) )
+( init ( cell 4 2 pawn ) )
+( init ( cell 4 3 pawn ) )
+( init ( cell 4 4 pawn ) )
+( init ( cell 4 5 pawn ) )
+( init ( cell 4 6 pawn ) )
+( init ( cell 4 7 pawn ) )
+( init ( cell 5 1 pawn ) )
+( init ( cell 5 2 pawn ) )
+( init ( cell 5 3 pawn ) )
+( init ( cell 5 4 pawn ) )
+( init ( cell 5 5 pawn ) )
+( init ( cell 5 6 pawn ) )
+( init ( cell 5 7 pawn ) )
+( init ( cell 6 1 pawn ) )
+( init ( cell 6 2 pawn ) )
+( init ( cell 6 3 pawn ) )
+( init ( cell 6 4 pawn ) )
+( init ( cell 6 5 pawn ) )
+( init ( cell 6 6 pawn ) )
+( init ( cell 6 7 pawn ) )
+( init ( cell 7 1 pawn ) )
+( init ( cell 7 2 pawn ) )
+( init ( cell 7 3 pawn ) )
+( init ( cell 7 4 pawn ) )
+( init ( cell 7 5 pawn ) )
+( init ( cell 7 6 pawn ) )
+( init ( cell 7 7 pawn ) )
+( init ( captures 0 ) )
+( init ( step 1 ) )
+( <= ( legal robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m1 ?n1 knight ) ) ( knightmove ?m1 ?n1 ?m2 ?n2 ) )
+( <= ( next ( cell ?m2 ?n2 knight ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) )
+( <= ( next ( cell ?m1 ?n1 blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) )
+( <= ( next ( cell ?u ?v pawn ) ) ( true ( cell ?u ?v pawn ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?u ?m2 ) )
+( <= ( next ( cell ?u ?v pawn ) ) ( true ( cell ?u ?v pawn ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?v ?n2 ) )
+( <= ( next ( cell ?u ?v blank ) ) ( true ( cell ?u ?v blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?u ?m2 ) )
+( <= ( next ( cell ?u ?v blank ) ) ( true ( cell ?u ?v blank ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( distinct ?v ?n2 ) )
+( <= ( next ( captures ?old ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m2 ?n2 blank ) ) ( true ( captures ?old ) ) )
+( <= ( next ( captures ?new ) ) ( does robot ( move ?m1 ?n1 ?m2 ?n2 ) ) ( true ( cell ?m2 ?n2 pawn ) ) ( true ( captures ?old ) ) ( succ ?old ?new ) )
+( <= ( next ( step ?new ) ) ( true ( step ?old ) ) ( succ ?old ?new ) )
+( <= ( goal robot ?goal ) ( true ( captures ?count ) ) ( scoremap ?count ?goal ) )
+( <= terminal ( true ( step 49 ) ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m1 ?m2 ) ( add2col ?n1 ?n2 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m1 ?m2 ) ( add2col ?n2 ?n1 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m2 ?m1 ) ( add2col ?n1 ?n2 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add1row ?m2 ?m1 ) ( add2col ?n2 ?n1 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m1 ?m2 ) ( add1col ?n1 ?n2 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m1 ?m2 ) ( add1col ?n2 ?n1 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m2 ?m1 ) ( add1col ?n1 ?n2 ) )
+( <= ( knightmove ?m1 ?n1 ?m2 ?n2 ) ( add2row ?m2 ?m1 ) ( add1col ?n2 ?n1 ) )
+( succ 0 1 )
+( succ 1 2 )
+( succ 2 3 )
+( succ 3 4 )
+( succ 4 5 )
+( succ 5 6 )
+( succ 6 7 )
+( succ 7 8 )
+( succ 8 9 )
+( succ 9 10 )
+( succ 10 11 )
+( succ 11 12 )
+( succ 12 13 )
+( succ 13 14 )
+( succ 14 15 )
+( succ 15 16 )
+( succ 16 17 )
+( succ 17 18 )
+( succ 18 19 )
+( succ 19 20 )
+( succ 20 21 )
+( succ 21 22 )
+( succ 22 23 )
+( succ 23 24 )
+( succ 24 25 )
+( succ 25 26 )
+( succ 26 27 )
+( succ 27 28 )
+( succ 28 29 )
+( succ 29 30 )
+( succ 30 31 )
+( succ 31 32 )
+( succ 32 33 )
+( succ 33 34 )
+( succ 34 35 )
+( succ 35 36 )
+( succ 36 37 )
+( succ 37 38 )
+( succ 38 39 )
+( succ 39 40 )
+( succ 40 41 )
+( succ 41 42 )
+( succ 42 43 )
+( succ 43 44 )
+( succ 44 45 )
+( succ 45 46 )
+( succ 46 47 )
+( succ 47 48 )
+( succ 48 49 )
+( add1row 1 2 )
+( add1row 2 3 )
+( add1row 3 4 )
+( add1row 4 5 )
+( add1row 5 6 )
+( add1row 6 7 )
+( add2row 1 3 )
+( add2row 2 4 )
+( add2row 3 5 )
+( add2row 4 6 )
+( add2row 5 7 )
+( add1col 1 2 )
+( add1col 2 3 )
+( add1col 3 4 )
+( add1col 4 5 )
+( add1col 5 6 )
+( add1col 6 7 )
+( add2col 1 3 )
+( add2col 2 4 )
+( add2col 3 5 )
+( add2col 4 6 )
+( add2col 5 7 )
+( scoremap 0 0 )
+( scoremap 1 0 )
+( scoremap 2 0 )
+( scoremap 3 0 )
+( scoremap 4 0 )
+( scoremap 5 0 )
+( scoremap 6 0 )
+( scoremap 7 0 )
+( scoremap 8 0 )
+( scoremap 9 1 )
+( scoremap 10 1 )
+( scoremap 11 1 )
+( scoremap 12 2 )
+( scoremap 13 2 )
+( scoremap 14 3 )
+( scoremap 15 3 )
+( scoremap 16 4 )
+( scoremap 17 5 )
+( scoremap 18 6 )
+( scoremap 19 7 )
+( scoremap 20 8 )
+( scoremap 21 9 )
+( scoremap 22 11 )
+( scoremap 23 12 )
+( scoremap 24 14 )
+( scoremap 25 15 )
+( scoremap 26 17 )
+( scoremap 27 19 )
+( scoremap 28 21 )
+( scoremap 29 23 )
+( scoremap 30 26 )
+( scoremap 31 28 )
+( scoremap 32 31 )
+( scoremap 33 34 )
+( scoremap 34 37 )
+( scoremap 35 40 )
+( scoremap 36 43 )
+( scoremap 37 47 )
+( scoremap 38 51 )
+( scoremap 39 55 )
+( scoremap 40 59 )
+( scoremap 41 63 )
+( scoremap 42 68 )
+( scoremap 43 72 )
+( scoremap 44 77 )
+( scoremap 45 83 )
+( scoremap 46 88 )
+( scoremap 47 94 )
+( scoremap 48 100 )
+
+2016-08-24 16:04:04,890 DEBUG izingPolymorphicPropNetFactory Building propnet
+2016-08-24 16:04:05,117 DEBUG dDeadReckonPropnetStateMachine Num components after anon prop removal: 2810
+2016-08-24 16:04:05,153 DEBUG dDeadReckonPropnetStateMachine Num components after unreachable removal: 2799
+2016-08-24 16:04:05,158 DEBUG izingPolymorphicPropNetFactory Removed 58 redundant components
+2016-08-24 16:04:05,158 DEBUG dDeadReckonPropnetStateMachine Num components after first pass redundant components removal: 2743
+2016-08-24 16:04:05,164 DEBUG izingPolymorphicPropNetFactory Net components removed by input->output factorization: 970
+2016-08-24 16:04:05,165 DEBUG izingPolymorphicPropNetFactory Fanout reduction by factorization of size: 0 at a cost of 0 gates
+2016-08-24 16:04:05,165 DEBUG dDeadReckonPropnetStateMachine Num components after large gate refactoring: 1773
+2016-08-24 16:04:05,170 DEBUG izingPolymorphicPropNetFactory Removed 158 duplicate components
+2016-08-24 16:04:05,170 DEBUG dDeadReckonPropnetStateMachine Num components after duplicate removal: 1615
+2016-08-24 16:04:05,178 DEBUG dDeadReckonPropnetStateMachine Num components after input set optimization: 1664
+2016-08-24 16:04:05,180 DEBUG dDeadReckonPropnetStateMachine Num components after inverted input optimization: 1664
+2016-08-24 16:04:05,182 DEBUG izingPolymorphicPropNetFactory Removed 16 redundant components
+2016-08-24 16:04:05,182 DEBUG dDeadReckonPropnetStateMachine Num components after further removal of redundant components: 1650
+2016-08-24 16:04:05,185 DEBUG dDeadReckonPropnetStateMachine Num components: 1650 with an average of 1 inputs.
+2016-08-24 16:04:05,185 DEBUG dDeadReckonPropnetStateMachine Num multi-input components: 542 with an average of 3 inputs.
+2016-08-24 16:04:05,191 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 724
+2016-08-24 16:04:05,193 DEBUG FactorAnalyser                 Reloading control set: ( ( true ( step 28 ) ), ( true ( step 2 ) ), ( true ( step 33 ) ), ( true ( step 3 ) ), ( true ( step 44 ) ), ( true ( step 27 ) ), ( true ( step 8 ) ), ( true ( step 40 ) ), ( true ( step 1 ) ), ( true ( step 17 ) ), ( true ( step 25 ) ), ( true ( step 12 ) ), ( true ( step 21 ) ), ( true ( step 6 ) ), ( true ( step 7 ) ), ( true ( step 34 ) ), ( true ( step 23 ) ), ( true ( step 29 ) ), ( true ( step 47 ) ), ( true ( step 5 ) ), ( true ( step 22 ) ), ( true ( step 48 ) ), ( true ( step 45 ) ), ( true ( step 19 ) ), ( true ( step 38 ) ), ( true ( step 49 ) ), ( true ( step 24 ) ), ( true ( step 11 ) ), ( true ( step 32 ) ), ( true ( step 42 ) ), ( true ( step 9 ) ), ( true ( step 15 ) ), ( true ( step 46 ) ), ( true ( step 26 ) ), ( true ( step 18 ) ), ( true ( step 37 ) ), ( true ( step 39 ) ), ( true ( step 43 ) ), ( true ( step 4 ) ), ( true ( step 31 ) ), ( true ( step 30 ) ), ( true ( step 10 ) ), ( true ( step 20 ) ), ( true ( step 16 ) ), ( true ( step 36 ) ), ( true ( step 41 ) ), ( true ( step 14 ) ), ( true ( step 35 ) ), ( true ( step 13 ) ) )
+2016-08-24 16:04:05,277 INFO  dDeadReckonPropnetStateMachine Reducing with respect to XSentence: ( true ( cell 4 5 knight ) )
+2016-08-24 16:04:05,277 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( cell 4 5 knight ) ) to value: true
+2016-08-24 16:04:05,282 DEBUG izingPolymorphicPropNetFactory Removed 55 redundant components
+2016-08-24 16:04:05,287 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,287 DEBUG dDeadReckonPropnetStateMachine Reverting OSentence optimizations
+2016-08-24 16:04:05,293 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( cell 4 5 knight ) ) to value: true
+2016-08-24 16:04:05,297 DEBUG izingPolymorphicPropNetFactory Removed 55 redundant components
+2016-08-24 16:04:05,302 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,302 DEBUG izingPolymorphicPropNetFactory Hardwire base prop ( true ( cell 4 5 knight ) ) to value: false
+2016-08-24 16:04:05,307 DEBUG izingPolymorphicPropNetFactory Removed 64 redundant components
+2016-08-24 16:04:05,311 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,316 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,316 DEBUG dDeadReckonPropnetStateMachine Num components remaining in X-net: 1549
+2016-08-24 16:04:05,316 DEBUG dDeadReckonPropnetStateMachine Num components remaining in O-net: 1531
+2016-08-24 16:04:05,327 DEBUG izingPolymorphicPropNetFactory Removed 9 redundant components
+2016-08-24 16:04:05,331 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,335 DEBUG izingPolymorphicPropNetFactory Removed 9 redundant components
+2016-08-24 16:04:05,339 DEBUG izingPolymorphicPropNetFactory Removed 5 redundant components
+2016-08-24 16:04:05,343 DEBUG izingPolymorphicPropNetFactory Removed 594 redundant components
+2016-08-24 16:04:05,343 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:04:05,344 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:04:05,348 DEBUG izingPolymorphicPropNetFactory Removed 590 redundant components
+2016-08-24 16:04:05,348 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:04:05,348 DEBUG izingPolymorphicPropNetFactory Removed 2 redundant components
+2016-08-24 16:04:05,348 INFO  dDeadReckonPropnetStateMachine Num components in goal-less X-net: 1508
+2016-08-24 16:04:05,348 INFO  dDeadReckonPropnetStateMachine Num components in goal-less O-net: 1490
+2016-08-24 16:04:05,348 INFO  dDeadReckonPropnetStateMachine Num components in goal net:        91
+2016-08-24 16:04:05,348 INFO  dDeadReckonPropnetStateMachine Num components in terminality net: 2
+2016-08-24 16:04:05,353 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 649
+2016-08-24 16:04:05,360 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 645
+2016-08-24 16:04:05,361 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 4
+2016-08-24 16:04:05,362 DEBUG dDeadReckonPropnetFastAnimator Animator instance state vector size: 0
+2016-08-24 16:04:05,363 INFO  Sancho                         This is Sancho 1.61d with last commit b573590fa4a633e2a3cd1355aad3cfe4b8095d5b
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   Running with machine-specific properties:
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   	SAFETY_MARGIN = 3300 (default: 2500)
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   	CREATING_DATABASE = false (default: false)
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   	WC_LOCATION = C:/Personal/Projects/GGP/ggp-base (default: null)
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   	CPU_INTENSIVE_THREADS = 4 (default: -1)
+2016-08-24 16:04:05,363 INFO  MachineSpecificConfiguration   	USE_AFFINITY = false (default: true)
+2016-08-24 16:04:05,373 INFO  Sancho                         Start clock: 120s
+2016-08-24 16:04:05,373 INFO  Sancho                         Play clock:  30s
+2016-08-24 16:04:05,373 INFO  Sancho                         We are:      robot
+2016-08-24 16:04:05,373 INFO  Sancho                         Considering saved plan: move 1 1 2 3,move 2 3 1 5,move 1 5 2 7,move 2 7 4 6,move 4 6 6 7,move 6 7 7 5,move 7 5 6 3,move 6 3 5 1,move 5 1 7 2,move 7 2 6 4,move 6 4 7 6,move 7 6 5 7,move 5 7 3 6,move 3 6 1 7,move 1 7 2 5,move 2 5 4 4,move 4 4 3 2,move 3 2 1 3,move 1 3 2 1,move 2 1 3 3,move 3 3 4 1,move 4 1 6 2,move 6 2 4 3,move 4 3 5 5,move 5 5 7 4,move 7 4 6 6,move 6 6 5 4,move 5 4 4 2,move 4 2 6 1,move 6 1 7 3,move 7 3 6 5,move 6 5 7 7,move 7 7 5 6,move 5 6 3 7,move 3 7 4 5,move 4 5 5 3,move 5 3 3 4,move 3 4 2 2,move 2 2 1 4,move 1 4 2 6,move 2 6 4 7,move 4 7 3 5,move 3 5 1 6,move 1 6 2 4,move 2 4 1 2,move 1 2 3 1,move 3 1 5 2,move 5 2 7 1
+2016-08-24 16:04:05,374 INFO  Sancho                         Ready to play
+2016-08-24 16:04:06,715 DEBUG Watchdog                       Watchdog won't fire until: 1472051646715
+2016-08-24 16:04:06,715 INFO  Sancho                         > > > > > Starting turn 1 < < < < <
+2016-08-24 16:04:06,715 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:06,716 INFO  Sancho                         Playing pre-planned move: ( move 1 1 2 3 )
+2016-08-24 16:04:06,716 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:08,413 DEBUG Watchdog                       Watchdog won't fire until: 1472051648413
+2016-08-24 16:04:08,413 INFO  Sancho                         Moves played for turn 1: [( move 1 1 2 3 )]
+2016-08-24 16:04:08,413 INFO  Sancho                         Non-null move last turn was: ( move 1 1 2 3 )
+2016-08-24 16:04:08,413 INFO  Sancho                         > > > > > Starting turn 2 < < < < <
+2016-08-24 16:04:08,413 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:08,414 INFO  Sancho                         Playing pre-planned move: ( move 2 3 1 5 )
+2016-08-24 16:04:08,414 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:09,612 DEBUG Watchdog                       Watchdog won't fire until: 1472051649612
+2016-08-24 16:04:09,612 INFO  Sancho                         Moves played for turn 2: [( move 2 3 1 5 )]
+2016-08-24 16:04:09,612 INFO  Sancho                         Non-null move last turn was: ( move 2 3 1 5 )
+2016-08-24 16:04:09,612 INFO  Sancho                         > > > > > Starting turn 3 < < < < <
+2016-08-24 16:04:09,612 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:09,612 INFO  Sancho                         Playing pre-planned move: ( move 1 5 2 7 )
+2016-08-24 16:04:09,612 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:10,954 DEBUG Watchdog                       Watchdog won't fire until: 1472051650954
+2016-08-24 16:04:10,954 INFO  Sancho                         Moves played for turn 3: [( move 1 5 2 7 )]
+2016-08-24 16:04:10,954 INFO  Sancho                         Non-null move last turn was: ( move 1 5 2 7 )
+2016-08-24 16:04:10,954 INFO  Sancho                         > > > > > Starting turn 4 < < < < <
+2016-08-24 16:04:10,954 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:10,954 INFO  Sancho                         Playing pre-planned move: ( move 2 7 4 6 )
+2016-08-24 16:04:10,954 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:12,298 DEBUG Watchdog                       Watchdog won't fire until: 1472051652298
+2016-08-24 16:04:12,298 INFO  Sancho                         Moves played for turn 4: [( move 2 7 4 6 )]
+2016-08-24 16:04:12,298 INFO  Sancho                         Non-null move last turn was: ( move 2 7 4 6 )
+2016-08-24 16:04:12,298 INFO  Sancho                         > > > > > Starting turn 5 < < < < <
+2016-08-24 16:04:12,298 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:12,298 INFO  Sancho                         Playing pre-planned move: ( move 4 6 6 7 )
+2016-08-24 16:04:12,298 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:13,653 DEBUG Watchdog                       Watchdog won't fire until: 1472051653653
+2016-08-24 16:04:13,653 INFO  Sancho                         Moves played for turn 5: [( move 4 6 6 7 )]
+2016-08-24 16:04:13,653 INFO  Sancho                         Non-null move last turn was: ( move 4 6 6 7 )
+2016-08-24 16:04:13,653 INFO  Sancho                         > > > > > Starting turn 6 < < < < <
+2016-08-24 16:04:13,653 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:13,653 INFO  Sancho                         Playing pre-planned move: ( move 6 7 7 5 )
+2016-08-24 16:04:13,653 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:14,988 DEBUG Watchdog                       Watchdog won't fire until: 1472051654988
+2016-08-24 16:04:14,988 INFO  Sancho                         Moves played for turn 6: [( move 6 7 7 5 )]
+2016-08-24 16:04:14,989 INFO  Sancho                         Non-null move last turn was: ( move 6 7 7 5 )
+2016-08-24 16:04:14,989 INFO  Sancho                         > > > > > Starting turn 7 < < < < <
+2016-08-24 16:04:14,989 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:14,989 INFO  Sancho                         Playing pre-planned move: ( move 7 5 6 3 )
+2016-08-24 16:04:14,989 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:16,335 DEBUG Watchdog                       Watchdog won't fire until: 1472051656335
+2016-08-24 16:04:16,335 INFO  Sancho                         Moves played for turn 7: [( move 7 5 6 3 )]
+2016-08-24 16:04:16,335 INFO  Sancho                         Non-null move last turn was: ( move 7 5 6 3 )
+2016-08-24 16:04:16,335 INFO  Sancho                         > > > > > Starting turn 8 < < < < <
+2016-08-24 16:04:16,335 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:16,335 INFO  Sancho                         Playing pre-planned move: ( move 6 3 5 1 )
+2016-08-24 16:04:16,335 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:17,674 DEBUG Watchdog                       Watchdog won't fire until: 1472051657674
+2016-08-24 16:04:17,674 INFO  Sancho                         Moves played for turn 8: [( move 6 3 5 1 )]
+2016-08-24 16:04:17,674 INFO  Sancho                         Non-null move last turn was: ( move 6 3 5 1 )
+2016-08-24 16:04:17,674 INFO  Sancho                         > > > > > Starting turn 9 < < < < <
+2016-08-24 16:04:17,674 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:17,674 INFO  Sancho                         Playing pre-planned move: ( move 5 1 7 2 )
+2016-08-24 16:04:17,674 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:19,010 DEBUG Watchdog                       Watchdog won't fire until: 1472051659010
+2016-08-24 16:04:19,010 INFO  Sancho                         Moves played for turn 9: [( move 5 1 7 2 )]
+2016-08-24 16:04:19,010 INFO  Sancho                         Non-null move last turn was: ( move 5 1 7 2 )
+2016-08-24 16:04:19,010 INFO  Sancho                         > > > > > Starting turn 10 < < < < <
+2016-08-24 16:04:19,010 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:19,010 INFO  Sancho                         Playing pre-planned move: ( move 7 2 6 4 )
+2016-08-24 16:04:19,010 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:20,354 DEBUG Watchdog                       Watchdog won't fire until: 1472051660354
+2016-08-24 16:04:20,354 INFO  Sancho                         Moves played for turn 10: [( move 7 2 6 4 )]
+2016-08-24 16:04:20,354 INFO  Sancho                         Non-null move last turn was: ( move 7 2 6 4 )
+2016-08-24 16:04:20,354 INFO  Sancho                         > > > > > Starting turn 11 < < < < <
+2016-08-24 16:04:20,354 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:20,354 INFO  Sancho                         Playing pre-planned move: ( move 6 4 7 6 )
+2016-08-24 16:04:20,354 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:21,696 DEBUG Watchdog                       Watchdog won't fire until: 1472051661696
+2016-08-24 16:04:21,696 INFO  Sancho                         Moves played for turn 11: [( move 6 4 7 6 )]
+2016-08-24 16:04:21,696 INFO  Sancho                         Non-null move last turn was: ( move 6 4 7 6 )
+2016-08-24 16:04:21,696 INFO  Sancho                         > > > > > Starting turn 12 < < < < <
+2016-08-24 16:04:21,696 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:21,696 INFO  Sancho                         Playing pre-planned move: ( move 7 6 5 7 )
+2016-08-24 16:04:21,696 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:23,029 DEBUG Watchdog                       Watchdog won't fire until: 1472051663029
+2016-08-24 16:04:23,029 INFO  Sancho                         Moves played for turn 12: [( move 7 6 5 7 )]
+2016-08-24 16:04:23,029 INFO  Sancho                         Non-null move last turn was: ( move 7 6 5 7 )
+2016-08-24 16:04:23,029 INFO  Sancho                         > > > > > Starting turn 13 < < < < <
+2016-08-24 16:04:23,029 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:23,029 INFO  Sancho                         Playing pre-planned move: ( move 5 7 3 6 )
+2016-08-24 16:04:23,029 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:24,455 DEBUG Watchdog                       Watchdog won't fire until: 1472051664455
+2016-08-24 16:04:24,455 INFO  Sancho                         Moves played for turn 13: [( move 5 7 3 6 )]
+2016-08-24 16:04:24,455 INFO  Sancho                         Non-null move last turn was: ( move 5 7 3 6 )
+2016-08-24 16:04:24,455 INFO  Sancho                         > > > > > Starting turn 14 < < < < <
+2016-08-24 16:04:24,455 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:24,456 INFO  Sancho                         Playing pre-planned move: ( move 3 6 1 7 )
+2016-08-24 16:04:24,456 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:25,987 DEBUG Watchdog                       Watchdog won't fire until: 1472051665987
+2016-08-24 16:04:25,987 INFO  Sancho                         Moves played for turn 14: [( move 3 6 1 7 )]
+2016-08-24 16:04:25,988 INFO  Sancho                         Non-null move last turn was: ( move 3 6 1 7 )
+2016-08-24 16:04:25,988 INFO  Sancho                         > > > > > Starting turn 15 < < < < <
+2016-08-24 16:04:25,988 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:25,988 INFO  Sancho                         Playing pre-planned move: ( move 1 7 2 5 )
+2016-08-24 16:04:25,988 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:27,451 DEBUG Watchdog                       Watchdog won't fire until: 1472051667451
+2016-08-24 16:04:27,451 INFO  Sancho                         Moves played for turn 15: [( move 1 7 2 5 )]
+2016-08-24 16:04:27,451 INFO  Sancho                         Non-null move last turn was: ( move 1 7 2 5 )
+2016-08-24 16:04:27,451 INFO  Sancho                         > > > > > Starting turn 16 < < < < <
+2016-08-24 16:04:27,451 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:27,451 INFO  Sancho                         Playing pre-planned move: ( move 2 5 4 4 )
+2016-08-24 16:04:27,451 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:28,793 DEBUG Watchdog                       Watchdog won't fire until: 1472051668793
+2016-08-24 16:04:28,793 INFO  Sancho                         Moves played for turn 16: [( move 2 5 4 4 )]
+2016-08-24 16:04:28,793 INFO  Sancho                         Non-null move last turn was: ( move 2 5 4 4 )
+2016-08-24 16:04:28,793 INFO  Sancho                         > > > > > Starting turn 17 < < < < <
+2016-08-24 16:04:28,793 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:28,793 INFO  Sancho                         Playing pre-planned move: ( move 4 4 3 2 )
+2016-08-24 16:04:28,793 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:30,130 DEBUG Watchdog                       Watchdog won't fire until: 1472051670130
+2016-08-24 16:04:30,130 INFO  Sancho                         Moves played for turn 17: [( move 4 4 3 2 )]
+2016-08-24 16:04:30,130 INFO  Sancho                         Non-null move last turn was: ( move 4 4 3 2 )
+2016-08-24 16:04:30,130 INFO  Sancho                         > > > > > Starting turn 18 < < < < <
+2016-08-24 16:04:30,130 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:30,131 INFO  Sancho                         Playing pre-planned move: ( move 3 2 1 3 )
+2016-08-24 16:04:30,131 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:31,476 DEBUG Watchdog                       Watchdog won't fire until: 1472051671476
+2016-08-24 16:04:31,477 INFO  Sancho                         Moves played for turn 18: [( move 3 2 1 3 )]
+2016-08-24 16:04:31,477 INFO  Sancho                         Non-null move last turn was: ( move 3 2 1 3 )
+2016-08-24 16:04:31,477 INFO  Sancho                         > > > > > Starting turn 19 < < < < <
+2016-08-24 16:04:31,477 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:31,477 INFO  Sancho                         Playing pre-planned move: ( move 1 3 2 1 )
+2016-08-24 16:04:31,477 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:32,809 DEBUG Watchdog                       Watchdog won't fire until: 1472051672809
+2016-08-24 16:04:32,809 INFO  Sancho                         Moves played for turn 19: [( move 1 3 2 1 )]
+2016-08-24 16:04:32,809 INFO  Sancho                         Non-null move last turn was: ( move 1 3 2 1 )
+2016-08-24 16:04:32,809 INFO  Sancho                         > > > > > Starting turn 20 < < < < <
+2016-08-24 16:04:32,809 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:32,810 INFO  Sancho                         Playing pre-planned move: ( move 2 1 3 3 )
+2016-08-24 16:04:32,810 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:34,152 DEBUG Watchdog                       Watchdog won't fire until: 1472051674151
+2016-08-24 16:04:34,152 INFO  Sancho                         Moves played for turn 20: [( move 2 1 3 3 )]
+2016-08-24 16:04:34,152 INFO  Sancho                         Non-null move last turn was: ( move 2 1 3 3 )
+2016-08-24 16:04:34,152 INFO  Sancho                         > > > > > Starting turn 21 < < < < <
+2016-08-24 16:04:34,152 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:34,152 INFO  Sancho                         Playing pre-planned move: ( move 3 3 4 1 )
+2016-08-24 16:04:34,152 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:35,690 DEBUG Watchdog                       Watchdog won't fire until: 1472051675690
+2016-08-24 16:04:35,690 INFO  Sancho                         Moves played for turn 21: [( move 3 3 4 1 )]
+2016-08-24 16:04:35,690 INFO  Sancho                         Non-null move last turn was: ( move 3 3 4 1 )
+2016-08-24 16:04:35,690 INFO  Sancho                         > > > > > Starting turn 22 < < < < <
+2016-08-24 16:04:35,690 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:35,690 INFO  Sancho                         Playing pre-planned move: ( move 4 1 6 2 )
+2016-08-24 16:04:35,690 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:36,896 DEBUG Watchdog                       Watchdog won't fire until: 1472051676896
+2016-08-24 16:04:36,896 INFO  Sancho                         Moves played for turn 22: [( move 4 1 6 2 )]
+2016-08-24 16:04:36,897 INFO  Sancho                         Non-null move last turn was: ( move 4 1 6 2 )
+2016-08-24 16:04:36,897 INFO  Sancho                         > > > > > Starting turn 23 < < < < <
+2016-08-24 16:04:36,897 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:36,897 INFO  Sancho                         Playing pre-planned move: ( move 6 2 4 3 )
+2016-08-24 16:04:36,897 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:38,236 DEBUG Watchdog                       Watchdog won't fire until: 1472051678236
+2016-08-24 16:04:38,236 INFO  Sancho                         Moves played for turn 23: [( move 6 2 4 3 )]
+2016-08-24 16:04:38,236 INFO  Sancho                         Non-null move last turn was: ( move 6 2 4 3 )
+2016-08-24 16:04:38,236 INFO  Sancho                         > > > > > Starting turn 24 < < < < <
+2016-08-24 16:04:38,236 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:38,236 INFO  Sancho                         Playing pre-planned move: ( move 4 3 5 5 )
+2016-08-24 16:04:38,236 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:39,567 DEBUG Watchdog                       Watchdog won't fire until: 1472051679567
+2016-08-24 16:04:39,568 INFO  Sancho                         Moves played for turn 24: [( move 4 3 5 5 )]
+2016-08-24 16:04:39,568 INFO  Sancho                         Non-null move last turn was: ( move 4 3 5 5 )
+2016-08-24 16:04:39,568 INFO  Sancho                         > > > > > Starting turn 25 < < < < <
+2016-08-24 16:04:39,568 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:39,568 INFO  Sancho                         Playing pre-planned move: ( move 5 5 7 4 )
+2016-08-24 16:04:39,568 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:40,910 DEBUG Watchdog                       Watchdog won't fire until: 1472051680910
+2016-08-24 16:04:40,910 INFO  Sancho                         Moves played for turn 25: [( move 5 5 7 4 )]
+2016-08-24 16:04:40,910 INFO  Sancho                         Non-null move last turn was: ( move 5 5 7 4 )
+2016-08-24 16:04:40,910 INFO  Sancho                         > > > > > Starting turn 26 < < < < <
+2016-08-24 16:04:40,910 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:40,911 INFO  Sancho                         Playing pre-planned move: ( move 7 4 6 6 )
+2016-08-24 16:04:40,911 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:42,249 DEBUG Watchdog                       Watchdog won't fire until: 1472051682249
+2016-08-24 16:04:42,249 INFO  Sancho                         Moves played for turn 26: [( move 7 4 6 6 )]
+2016-08-24 16:04:42,249 INFO  Sancho                         Non-null move last turn was: ( move 7 4 6 6 )
+2016-08-24 16:04:42,249 INFO  Sancho                         > > > > > Starting turn 27 < < < < <
+2016-08-24 16:04:42,249 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:42,250 INFO  Sancho                         Playing pre-planned move: ( move 6 6 5 4 )
+2016-08-24 16:04:42,250 DEBUG Sancho                         Move took: 1
+2016-08-24 16:04:43,585 DEBUG Watchdog                       Watchdog won't fire until: 1472051683585
+2016-08-24 16:04:43,585 INFO  Sancho                         Moves played for turn 27: [( move 6 6 5 4 )]
+2016-08-24 16:04:43,585 INFO  Sancho                         Non-null move last turn was: ( move 6 6 5 4 )
+2016-08-24 16:04:43,585 INFO  Sancho                         > > > > > Starting turn 28 < < < < <
+2016-08-24 16:04:43,585 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:43,585 INFO  Sancho                         Playing pre-planned move: ( move 5 4 4 2 )
+2016-08-24 16:04:43,585 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:44,917 DEBUG Watchdog                       Watchdog won't fire until: 1472051684917
+2016-08-24 16:04:44,917 INFO  Sancho                         Moves played for turn 28: [( move 5 4 4 2 )]
+2016-08-24 16:04:44,917 INFO  Sancho                         Non-null move last turn was: ( move 5 4 4 2 )
+2016-08-24 16:04:44,917 INFO  Sancho                         > > > > > Starting turn 29 < < < < <
+2016-08-24 16:04:44,917 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:44,917 INFO  Sancho                         Playing pre-planned move: ( move 4 2 6 1 )
+2016-08-24 16:04:44,917 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:46,256 DEBUG Watchdog                       Watchdog won't fire until: 1472051686256
+2016-08-24 16:04:46,256 INFO  Sancho                         Moves played for turn 29: [( move 4 2 6 1 )]
+2016-08-24 16:04:46,256 INFO  Sancho                         Non-null move last turn was: ( move 4 2 6 1 )
+2016-08-24 16:04:46,256 INFO  Sancho                         > > > > > Starting turn 30 < < < < <
+2016-08-24 16:04:46,256 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:46,256 INFO  Sancho                         Playing pre-planned move: ( move 6 1 7 3 )
+2016-08-24 16:04:46,256 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:47,596 DEBUG Watchdog                       Watchdog won't fire until: 1472051687596
+2016-08-24 16:04:47,596 INFO  Sancho                         Moves played for turn 30: [( move 6 1 7 3 )]
+2016-08-24 16:04:47,596 INFO  Sancho                         Non-null move last turn was: ( move 6 1 7 3 )
+2016-08-24 16:04:47,596 INFO  Sancho                         > > > > > Starting turn 31 < < < < <
+2016-08-24 16:04:47,596 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:47,596 INFO  Sancho                         Playing pre-planned move: ( move 7 3 6 5 )
+2016-08-24 16:04:47,596 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:48,928 DEBUG Watchdog                       Watchdog won't fire until: 1472051688928
+2016-08-24 16:04:48,928 INFO  Sancho                         Moves played for turn 31: [( move 7 3 6 5 )]
+2016-08-24 16:04:48,928 INFO  Sancho                         Non-null move last turn was: ( move 7 3 6 5 )
+2016-08-24 16:04:48,928 INFO  Sancho                         > > > > > Starting turn 32 < < < < <
+2016-08-24 16:04:48,928 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:48,928 INFO  Sancho                         Playing pre-planned move: ( move 6 5 7 7 )
+2016-08-24 16:04:48,928 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:50,270 DEBUG Watchdog                       Watchdog won't fire until: 1472051690270
+2016-08-24 16:04:50,270 INFO  Sancho                         Moves played for turn 32: [( move 6 5 7 7 )]
+2016-08-24 16:04:50,270 INFO  Sancho                         Non-null move last turn was: ( move 6 5 7 7 )
+2016-08-24 16:04:50,270 INFO  Sancho                         > > > > > Starting turn 33 < < < < <
+2016-08-24 16:04:50,270 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:50,270 INFO  Sancho                         Playing pre-planned move: ( move 7 7 5 6 )
+2016-08-24 16:04:50,270 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:51,610 DEBUG Watchdog                       Watchdog won't fire until: 1472051691610
+2016-08-24 16:04:51,610 INFO  Sancho                         Moves played for turn 33: [( move 7 7 5 6 )]
+2016-08-24 16:04:51,610 INFO  Sancho                         Non-null move last turn was: ( move 7 7 5 6 )
+2016-08-24 16:04:51,610 INFO  Sancho                         > > > > > Starting turn 34 < < < < <
+2016-08-24 16:04:51,610 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:51,610 INFO  Sancho                         Playing pre-planned move: ( move 5 6 3 7 )
+2016-08-24 16:04:51,610 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:52,956 DEBUG Watchdog                       Watchdog won't fire until: 1472051692956
+2016-08-24 16:04:52,956 INFO  Sancho                         Moves played for turn 34: [( move 5 6 3 7 )]
+2016-08-24 16:04:52,956 INFO  Sancho                         Non-null move last turn was: ( move 5 6 3 7 )
+2016-08-24 16:04:52,956 INFO  Sancho                         > > > > > Starting turn 35 < < < < <
+2016-08-24 16:04:52,956 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:52,956 INFO  Sancho                         Playing pre-planned move: ( move 3 7 4 5 )
+2016-08-24 16:04:52,956 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:54,303 DEBUG Watchdog                       Watchdog won't fire until: 1472051694303
+2016-08-24 16:04:54,303 INFO  Sancho                         Moves played for turn 35: [( move 3 7 4 5 )]
+2016-08-24 16:04:54,303 INFO  Sancho                         Non-null move last turn was: ( move 3 7 4 5 )
+2016-08-24 16:04:54,303 INFO  Sancho                         > > > > > Starting turn 36 < < < < <
+2016-08-24 16:04:54,303 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:54,303 INFO  Sancho                         Playing pre-planned move: ( move 4 5 5 3 )
+2016-08-24 16:04:54,303 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:55,645 DEBUG Watchdog                       Watchdog won't fire until: 1472051695645
+2016-08-24 16:04:55,645 INFO  Sancho                         Moves played for turn 36: [( move 4 5 5 3 )]
+2016-08-24 16:04:55,645 INFO  Sancho                         Non-null move last turn was: ( move 4 5 5 3 )
+2016-08-24 16:04:55,645 INFO  Sancho                         > > > > > Starting turn 37 < < < < <
+2016-08-24 16:04:55,645 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:55,645 INFO  Sancho                         Playing pre-planned move: ( move 5 3 3 4 )
+2016-08-24 16:04:55,645 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:56,982 DEBUG Watchdog                       Watchdog won't fire until: 1472051696982
+2016-08-24 16:04:56,982 INFO  Sancho                         Moves played for turn 37: [( move 5 3 3 4 )]
+2016-08-24 16:04:56,982 INFO  Sancho                         Non-null move last turn was: ( move 5 3 3 4 )
+2016-08-24 16:04:56,982 INFO  Sancho                         > > > > > Starting turn 38 < < < < <
+2016-08-24 16:04:56,982 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:56,982 INFO  Sancho                         Playing pre-planned move: ( move 3 4 2 2 )
+2016-08-24 16:04:56,982 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:58,325 DEBUG Watchdog                       Watchdog won't fire until: 1472051698325
+2016-08-24 16:04:58,325 INFO  Sancho                         Moves played for turn 38: [( move 3 4 2 2 )]
+2016-08-24 16:04:58,325 INFO  Sancho                         Non-null move last turn was: ( move 3 4 2 2 )
+2016-08-24 16:04:58,325 INFO  Sancho                         > > > > > Starting turn 39 < < < < <
+2016-08-24 16:04:58,325 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:58,325 INFO  Sancho                         Playing pre-planned move: ( move 2 2 1 4 )
+2016-08-24 16:04:58,325 DEBUG Sancho                         Move took: 0
+2016-08-24 16:04:59,664 DEBUG Watchdog                       Watchdog won't fire until: 1472051699664
+2016-08-24 16:04:59,664 INFO  Sancho                         Moves played for turn 39: [( move 2 2 1 4 )]
+2016-08-24 16:04:59,664 INFO  Sancho                         Non-null move last turn was: ( move 2 2 1 4 )
+2016-08-24 16:04:59,664 INFO  Sancho                         > > > > > Starting turn 40 < < < < <
+2016-08-24 16:04:59,664 DEBUG Sancho                         Calculating current state
+2016-08-24 16:04:59,664 INFO  Sancho                         Playing pre-planned move: ( move 1 4 2 6 )
+2016-08-24 16:04:59,664 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:01,006 DEBUG Watchdog                       Watchdog won't fire until: 1472051701006
+2016-08-24 16:05:01,006 INFO  Sancho                         Moves played for turn 40: [( move 1 4 2 6 )]
+2016-08-24 16:05:01,006 INFO  Sancho                         Non-null move last turn was: ( move 1 4 2 6 )
+2016-08-24 16:05:01,006 INFO  Sancho                         > > > > > Starting turn 41 < < < < <
+2016-08-24 16:05:01,006 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:01,006 INFO  Sancho                         Playing pre-planned move: ( move 2 6 4 7 )
+2016-08-24 16:05:01,006 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:02,339 DEBUG Watchdog                       Watchdog won't fire until: 1472051702339
+2016-08-24 16:05:02,339 INFO  Sancho                         Moves played for turn 41: [( move 2 6 4 7 )]
+2016-08-24 16:05:02,339 INFO  Sancho                         Non-null move last turn was: ( move 2 6 4 7 )
+2016-08-24 16:05:02,339 INFO  Sancho                         > > > > > Starting turn 42 < < < < <
+2016-08-24 16:05:02,339 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:02,339 INFO  Sancho                         Playing pre-planned move: ( move 4 7 3 5 )
+2016-08-24 16:05:02,339 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:03,676 DEBUG Watchdog                       Watchdog won't fire until: 1472051703676
+2016-08-24 16:05:03,676 INFO  Sancho                         Moves played for turn 42: [( move 4 7 3 5 )]
+2016-08-24 16:05:03,676 INFO  Sancho                         Non-null move last turn was: ( move 4 7 3 5 )
+2016-08-24 16:05:03,676 INFO  Sancho                         > > > > > Starting turn 43 < < < < <
+2016-08-24 16:05:03,676 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:03,676 INFO  Sancho                         Playing pre-planned move: ( move 3 5 1 6 )
+2016-08-24 16:05:03,676 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:05,021 DEBUG Watchdog                       Watchdog won't fire until: 1472051705021
+2016-08-24 16:05:05,021 INFO  Sancho                         Moves played for turn 43: [( move 3 5 1 6 )]
+2016-08-24 16:05:05,021 INFO  Sancho                         Non-null move last turn was: ( move 3 5 1 6 )
+2016-08-24 16:05:05,021 INFO  Sancho                         > > > > > Starting turn 44 < < < < <
+2016-08-24 16:05:05,021 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:05,022 INFO  Sancho                         Playing pre-planned move: ( move 1 6 2 4 )
+2016-08-24 16:05:05,022 DEBUG Sancho                         Move took: 1
+2016-08-24 16:05:06,360 DEBUG Watchdog                       Watchdog won't fire until: 1472051706360
+2016-08-24 16:05:06,360 INFO  Sancho                         Moves played for turn 44: [( move 1 6 2 4 )]
+2016-08-24 16:05:06,360 INFO  Sancho                         Non-null move last turn was: ( move 1 6 2 4 )
+2016-08-24 16:05:06,360 INFO  Sancho                         > > > > > Starting turn 45 < < < < <
+2016-08-24 16:05:06,360 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:06,360 INFO  Sancho                         Playing pre-planned move: ( move 2 4 1 2 )
+2016-08-24 16:05:06,360 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:07,703 DEBUG Watchdog                       Watchdog won't fire until: 1472051707703
+2016-08-24 16:05:07,703 INFO  Sancho                         Moves played for turn 45: [( move 2 4 1 2 )]
+2016-08-24 16:05:07,703 INFO  Sancho                         Non-null move last turn was: ( move 2 4 1 2 )
+2016-08-24 16:05:07,703 INFO  Sancho                         > > > > > Starting turn 46 < < < < <
+2016-08-24 16:05:07,703 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:07,704 INFO  Sancho                         Playing pre-planned move: ( move 1 2 3 1 )
+2016-08-24 16:05:07,704 DEBUG Sancho                         Move took: 1
+2016-08-24 16:05:09,037 DEBUG Watchdog                       Watchdog won't fire until: 1472051709037
+2016-08-24 16:05:09,037 INFO  Sancho                         Moves played for turn 46: [( move 1 2 3 1 )]
+2016-08-24 16:05:09,037 INFO  Sancho                         Non-null move last turn was: ( move 1 2 3 1 )
+2016-08-24 16:05:09,037 INFO  Sancho                         > > > > > Starting turn 47 < < < < <
+2016-08-24 16:05:09,037 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:09,037 INFO  Sancho                         Playing pre-planned move: ( move 3 1 5 2 )
+2016-08-24 16:05:09,037 DEBUG Sancho                         Move took: 0
+2016-08-24 16:05:10,373 DEBUG Watchdog                       Watchdog won't fire until: 1472051710373
+2016-08-24 16:05:10,373 INFO  Sancho                         Moves played for turn 47: [( move 3 1 5 2 )]
+2016-08-24 16:05:10,373 INFO  Sancho                         Non-null move last turn was: ( move 3 1 5 2 )
+2016-08-24 16:05:10,373 INFO  Sancho                         > > > > > Starting turn 48 < < < < <
+2016-08-24 16:05:10,373 DEBUG Sancho                         Calculating current state
+2016-08-24 16:05:10,374 INFO  Sancho                         Playing pre-planned move: ( move 5 2 7 1 )
+2016-08-24 16:05:10,374 DEBUG Sancho                         Move took: 1
+2016-08-24 16:05:11,706 INFO  Sancho                         Final score: 100
+2016-08-24 16:05:11,706 INFO  GameSearcher                   Terminating GameSearcher (mTerminateRequested = true)
+2016-08-24 16:05:11,833 INFO  Watchdog                       Stop the watchdog
+2016-08-24 16:05:11,833 INFO  Watchdog                       Watchdog terminated
+2016-08-24 16:05:14,847 INFO  Sancho                         Tidy-up complete
