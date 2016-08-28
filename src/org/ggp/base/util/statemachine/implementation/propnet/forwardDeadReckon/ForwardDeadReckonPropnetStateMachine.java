@@ -1117,13 +1117,14 @@ public class ForwardDeadReckonPropnetStateMachine extends StateMachine
 
       OptimizingPolymorphicPropNetFactory.removeUnreachableBasesAndInputs(fullPropNet);
       fullPropNet.renderToFile("propnet_014_UnreachablesRemoved.dot");
+      LOGGER.debug("Num components after unreachable removal: " + fullPropNet.getComponents().size());
       assert(fullPropNet.validateClosure());
 
       isPseudoPuzzle = OptimizingPolymorphicPropNetFactory.removeIrrelevantBasesAndInputs(fullPropNet,
                                                                                           ourRole,
                                                                                           mFillerMoves);
       fullPropNet.renderToFile("propnet_016_IrrelevantRemoved.dot");
-      LOGGER.debug("Num components after unreachable removal: " + fullPropNet.getComponents().size());
+      LOGGER.debug("Num components after irrelevant removal: " + fullPropNet.getComponents().size());
       assert(fullPropNet.validateClosure());
 
       OptimizingPolymorphicPropNetFactory.removeRedundantConstantsAndGates(fullPropNet, false);
