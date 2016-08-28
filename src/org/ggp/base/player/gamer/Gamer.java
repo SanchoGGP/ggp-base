@@ -198,6 +198,11 @@ public abstract class Gamer implements Subject
     return mGDLTranslator.getGameDir().getName();
   }
 
+  public File getGameDir()
+  {
+    return mGDLTranslator.getGameDir();
+  }
+
   // ==== Observer Stuff ====
   private final List<Observer> observers;
 
