@@ -2,8 +2,8 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
   <entry key="num_roles">4</entry>
-  <entry key="simultaneous">true</entry>
-  <entry key="pseudo_simultaneous">true</entry>
+  <entry key="simultaneous">false</entry>
+  <entry key="pseudo_simultaneous">false</entry>
   <entry key="iterated">false</entry>
   <entry key="max_factor_failure_time">0</entry>
   <entry key="num_factors">1</entry>

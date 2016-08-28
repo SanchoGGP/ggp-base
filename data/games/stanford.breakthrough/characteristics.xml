@@ -8,8 +8,14 @@
   <entry key="max_factor_failure_time">0</entry>
   <entry key="num_factors">1</entry>
   <entry key="moves_in_multiple_factors">false</entry>
-  <entry key="max_branching_factor">40</entry>
+  <entry key="max_branching_factor">42</entry>
   <entry key="fixed_length">false</entry>
   <entry key="control_mask">( ( true ( control white ) ), ( true ( control black ) ) )</entry>
+  <entry key="latches_base_positive">{false}</entry>
+  <entry key="latches_base_negative">{true,{3,20266507565531200,20266507565531208,8}}</entry>
+  <entry key="latches_goal_positive">{false}</entry>
+  <entry key="latches_goal_negative">{false}</entry>
+  <entry key="latches_goal_complex">{false}</entry>
+  <entry key="latches_goal_per_role">{false}</entry>
   <entry key="factors"></entry>
 </properties>

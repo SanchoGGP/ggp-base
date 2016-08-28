@@ -8,8 +8,14 @@
   <entry key="max_factor_failure_time">0</entry>
   <entry key="num_factors">1</entry>
   <entry key="moves_in_multiple_factors">false</entry>
-  <entry key="max_branching_factor">23</entry>
+  <entry key="max_branching_factor">29</entry>
   <entry key="fixed_length">false</entry>
   <entry key="control_mask">( ( true ( cell blue 5 5 ) ), ( true ( control red ) ), ( true ( cell blue 10 5 ) ), ( true ( cell blue 8 5 ) ), ( true ( cell red 9 6 ) ), ( true ( cell red 4 6 ) ), ( true ( cell blue 1 5 ) ), ( true ( cell blue 7 5 ) ), ( true ( cell red 7 6 ) ), ( true ( cell red 5 6 ) ), ( true ( cell red 10 6 ) ), ( true ( cell red 1 6 ) ), ( true ( cell red 3 6 ) ), ( true ( cell red 2 6 ) ), ( true ( cell blue 4 5 ) ), ( true ( control blue ) ), ( true ( cell blue 6 5 ) ), ( true ( cell blue 9 5 ) ), ( true ( cell red 6 6 ) ), ( true ( cell blue 2 5 ) ), ( true ( cell blue 3 5 ) ), ( true ( cell red 8 6 ) ) )</entry>
+  <entry key="latches_base_positive">{true,{7,-144397213884223616,-72198606942111749,-36099303471055875,7,0,0,8184}}</entry>
+  <entry key="latches_base_negative">{true,{7,0,0,0,1015808,2130303778816,0,0}}</entry>
+  <entry key="latches_goal_positive">{false}</entry>
+  <entry key="latches_goal_negative">{false}</entry>
+  <entry key="latches_goal_complex">{false}</entry>
+  <entry key="latches_goal_per_role">{false}</entry>
   <entry key="factors"></entry>
 </properties>
