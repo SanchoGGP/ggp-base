@@ -4208,7 +4208,7 @@ public class OptimizingPolymorphicPropNetFactory
 
             if (!found)
             {
-              LOGGER.warn("Signature mismatch (input mismatch)");
+              LOGGER.error("Signature mismatch (input mismatch)");
 
               long otherChk = 0;
               for (PolymorphicComponent other : first.getInputs())
@@ -4243,7 +4243,6 @@ public class OptimizingPolymorphicPropNetFactory
               {
                 LOGGER.warn("This instance's signature does not match");
               }
-              LOGGER.error("All fucked up");
               break;
             }
           }
