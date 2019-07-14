@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.regex.Matcher;
@@ -23,14 +25,14 @@ public class Tlkio implements Runnable
 {
   private static final Logger LOGGER = LogManager.getLogger();
 
-  private static final Pattern TOKEN_PATTERN = Pattern.compile("content=\"([^\"]+)\" name=\"csrf-token\"");
+  private static final Pattern TOKEN_PATTERN = Pattern.compile("name=\"csrf-token\" content=\"([^\"]+)\"");
   private static final Pattern CHANNEL_PATTERN = Pattern.compile(".chat_id = '(\\d+)'");
 
   private final String mNickname;
   private final String mChannelName;
 
   private String mChannelID;
-  private String mCookie;
+  private List<String> mCookies = new ArrayList<>(0);
   private String mToken;
 
   private final BlockingQueue<String> mMessageQueue = new ArrayBlockingQueue<>(5);
@@ -107,11 +109,14 @@ public class Tlkio implements Runnable
     // Fetch the channel page.
     URL lURL = new URL("https://tlk.io/" + xiChannel);
     HttpsURLConnection lConnection = (HttpsURLConnection)lURL.openConnection();
+    setStandardHeaders(lConnection);
+    lConnection.setRequestProperty("Accept", "text/html");
+    lConnection.setRequestProperty("Upgrade-Insecure-Requests", "1");
 
     int lResponseCode = lConnection.getResponseCode();
 
     // Extract the cookie from the headers.
-    extractCookie(lConnection);
+    extractCookies(lConnection);
 
     // Read the body.
     String lBody = readBody(lConnection.getInputStream());
@@ -127,16 +132,27 @@ public class Tlkio implements Runnable
     mChannelID = lMatcher.group(1);
   }
 
-  private void extractCookie(HttpsURLConnection xiConnection) throws IOException
+  private void setStandardHeaders(HttpsURLConnection lConnection) {
+    lConnection.setRequestProperty("Accept-Language", "en-GB,en");
+    lConnection.setRequestProperty("Connection", "keep-alive");
+    lConnection.setRequestProperty("Host", "tlk.io");
+    lConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0");
+  }
+
+  private void extractCookies(HttpsURLConnection xiConnection)
   {
-    String lCookie = xiConnection.getHeaderField("Set-Cookie");
-    if (lCookie == null)
+    List<String> lCookies = xiConnection.getHeaderFields().get("Set-Cookie");
+    if ((lCookies == null) || (lCookies.size() == 0))
     {
       LOGGER.warn("No cookie in response");
       return;
     }
-    lCookie = lCookie.substring(0, lCookie.indexOf(';'));
-    mCookie = lCookie;
+
+    mCookies = new ArrayList<>(lCookies.size());
+    for (String lCookie : lCookies)
+    {
+        mCookies.add(lCookie.substring(0, lCookie.indexOf(';')));
+    }
   }
 
   /**
@@ -155,7 +171,7 @@ public class Tlkio implements Runnable
     }
     catch (IOException lEx)
     {
-      LOGGER.warn("Failed to login to tlk.io");
+      LOGGER.warn("Failed to login to tlk.io", lEx);
     }
 
     return false;
@@ -187,11 +203,23 @@ public class Tlkio implements Runnable
     lConnection.setRequestMethod("POST");
 
     // Add request headers.
+    setStandardHeaders(lConnection);
+    lConnection.setRequestProperty("Accept", "application/json");
     lConnection.setRequestProperty("Content-Type", "application/json");
-    lConnection.setRequestProperty("Cookie", mCookie);
+    for (String lCookie : mCookies)
+    {
+        if (!lCookie.startsWith("__cfduid"))
+        {
+          lConnection.setRequestProperty("Cookie", lCookie);
+        }
+    }
+    lConnection.setRequestProperty("Referer", "https://tlk.io/" + mChannelName);
     lConnection.setRequestProperty("X-CSRF-Token", mToken);
+    lConnection.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+    lConnection.setRequestProperty("Content-Length", "" + xiBody.length());
 
-    LOGGER.debug("Sending " + xiBody + " to " + xiURL + " with token " + mToken + " and cookie " + mCookie);
+    LOGGER.debug("Sending " + xiBody + " to " + xiURL + " with token " + mToken + " and cookies " + mCookies);
+    // System.out.println("Sending " + xiBody + " to " + xiURL + " with token " + mToken + " and cookies " + mCookies);
 
     // Send post request
     lConnection.setDoOutput(true);
@@ -200,7 +228,6 @@ public class Tlkio implements Runnable
     lBodyWriter.flush();
     lBodyWriter.close();
 
-    LOGGER.debug("Fetching: " + lConnection.getURL());
     int lResponseCode = lConnection.getResponseCode();
     if (lResponseCode != 200)
     {
@@ -211,7 +238,7 @@ public class Tlkio implements Runnable
     }
     else
     {
-      extractCookie(lConnection);
+      extractCookies(lConnection);
       String lBody = readBody(lConnection.getInputStream());
       LOGGER.debug("Success body: " + lBody);
     }
