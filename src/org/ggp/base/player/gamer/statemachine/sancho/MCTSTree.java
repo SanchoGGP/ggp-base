@@ -48,7 +48,7 @@ public class MCTSTree
   public static final boolean                          KEEP_BEST_COMPLETION_PATHS                  = true;
   public static final boolean                          DISABLE_ONE_LEVEL_MINIMAX                   = true;
   private static final boolean                         SUPPORT_TRANSITIONS                         = true;
-  public static final int                              MAX_SUPPORTED_BRANCHING_FACTOR              = 1000;
+  public static final int                              MAX_SUPPORTED_BRANCHING_FACTOR              = 3000;
   public static final int                              MAX_SUPPORTED_TREE_DEPTH                    = 500;
   private static final int                             NUM_TOP_MOVE_CANDIDATES                     = 4;
 
