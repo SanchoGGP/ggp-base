@@ -979,7 +979,7 @@ public class ForwardDeadReckonPropnetStateMachine extends StateMachine
   }
 
   /**
-   * Construct the master state machine, for use during meta-gaming and for cloning per-thread instance from.
+   * Construct the master state machine, for use during meta-gaming and for cloning per-thread instances from.
    *
    * State machines are NOT thread-safe.
    *

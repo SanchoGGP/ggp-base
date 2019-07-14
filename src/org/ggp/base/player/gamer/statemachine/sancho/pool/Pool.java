@@ -1,6 +1,4 @@
-
 package org.ggp.base.player.gamer.statemachine.sancho.pool;
-
 
 /**
  * An pool of items.
