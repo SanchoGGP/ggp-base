@@ -10,6 +10,12 @@
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">81</entry>
   <entry key="fixed_length">false</entry>
-  <entry key="control_mask">( ( true ( control oPlayer ) ), ( true ( control xPlayer ) ) )</entry>
+  <entry key="control_mask">( ( true ( control oplayer ) ), ( true ( control xplayer ) ) )</entry>
+  <entry key="latches_base_positive">{true,{3,-262144,-1,4503599627370495}}</entry>
+  <entry key="latches_base_negative">{false}</entry>
+  <entry key="latches_goal_positive">{false}</entry>
+  <entry key="latches_goal_negative">{false}</entry>
+  <entry key="latches_goal_complex">{false}</entry>
+  <entry key="latches_goal_per_role">{false}</entry>
   <entry key="factors"></entry>
 </properties>
