@@ -119,7 +119,7 @@ public class AssignmentIteratorImpl implements AssignmentIterator
   private GdlConstant replaceVariables(GdlTerm term)
   {
     if (term instanceof GdlFunction)
-      throw new RuntimeException("Function in the distinct... not handled");
+      throw new RuntimeException("Function in distinct(X Y) not handled while processing: " + term);
     //Use the assignments implied by nextAssignment
     if (plan.getHeadAssignment().containsKey(term))
       return plan.getHeadAssignment().get(term); //Translated in head assignment

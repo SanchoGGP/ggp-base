@@ -48,6 +48,7 @@ import org.ggp.base.util.gdl.transforms.CondensationIsolator;
 import org.ggp.base.util.gdl.transforms.ConstantChecker;
 import org.ggp.base.util.gdl.transforms.ConstantCheckerFactory;
 import org.ggp.base.util.gdl.transforms.DeORer;
+import org.ggp.base.util.gdl.transforms.DistinctFunctionRemover;
 import org.ggp.base.util.gdl.transforms.GdlCleaner;
 import org.ggp.base.util.gdl.transforms.Relationizer;
 import org.ggp.base.util.gdl.transforms.VariableConstrainer;
@@ -132,6 +133,7 @@ public class OptimizingPolymorphicPropNetFactory
     // simplifications to be applied again.
     xiDescription = GdlCleaner.run(xiDescription);
     xiDescription = DeORer.run(xiDescription);
+    xiDescription = DistinctFunctionRemover.run(xiDescription);
     xiDescription = VariableConstrainer.replaceFunctionValuedVariables(xiDescription);
     xiDescription = Relationizer.run(xiDescription);
     xiDescription = CondensationIsolator.run(xiDescription);
