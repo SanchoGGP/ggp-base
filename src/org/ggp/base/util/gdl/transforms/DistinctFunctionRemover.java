@@ -119,7 +119,7 @@ public class DistinctFunctionRemover {
                 // This is exactly the case we should handle.  Rewrite the rule N times, where N is the arity of the
                 // function.  In each case, clone the rule but replace the current distinct with a version that looks
                 // only at the ith argument to the function.
-                LOGGER.info("Replacing rule: " + xiRule);
+                LOGGER.debug("Replacing rule: " + xiRule);
                 for (int ii = 0; ii < fn1.arity(); ii++) {
                     List<GdlLiteral> newRuleBody = new ArrayList<>(xiRule.getBody().size());
                     for (GdlLiteral literalToCopy : xiRule.getBody()) {
@@ -135,7 +135,7 @@ public class DistinctFunctionRemover {
                     // Add the new rule to the output list.
                     GdlRule newRule = GdlPool.getRule(xiRule.getHead(), newRuleBody);
                     xbNewRules.add(newRule);
-                    LOGGER.info("Added new rule: " + newRule);
+                    LOGGER.debug("Added new rule: " + newRule);
                 }
 
                 // We've replaced the rule that we're working through.  It may still have further distincts that can be

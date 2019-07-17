@@ -43,16 +43,18 @@ public class RuntimeGameCharacteristics extends GameCharacteristics
   private static final String LATCHES_GOAL_NEGATIVE         = "latches_goal_negative";
   private static final String LATCHES_GOAL_COMPLEX          = "latches_goal_complex";
   private static final String LATCHES_GOAL_PER_ROLE         = "latches_goal_per_role";
+  private static final String RAVE_DISABLED                 = "rave_disabled";
 
   private final XMLPropertiesConfiguration mConfigFile;
   private boolean                          mLoadedConfig;
 
-  private double              mExplorationBias         = 1.0;
-  private double              mExactRolloutSampleSize = 1;
+  private double              mExplorationBias             = 1.0;
+  private double              mExactRolloutSampleSize      = 1;
   private volatile int        mRolloutSampleSize;
   private int                 mMaxObservedChoices;
   private final double        mCompetitivenessBonus        = 2;
   private boolean             mIsFixedMoveCount            = false;
+  private boolean             mRAVEDisabled                = false;
   private boolean             mIsFixedSum                  = false;
   private double              mTerminalityDensity          = 0;
   private double              mAverageBranchingFactor      = 1;
@@ -138,7 +140,8 @@ public class RuntimeGameCharacteristics extends GameCharacteristics
           mMaxFactorFailureTime          = lConfigFile.getLong(MAX_FACTOR_FAILURE_TIME, 0);
           moveChoicesFromMultipleFactors = lConfigFile.getBoolean(MOVES_IN_MULTIPLE_FACTORS_KEY, false);
           mMaxObservedChoices            = lConfigFile.getInt(MAX_BRANCHING_FACTOR_KEY, 1);
-          mIsFixedMoveCount               = lConfigFile.getBoolean(FIXED_LENGTH_KEY, false);
+          mIsFixedMoveCount              = lConfigFile.getBoolean(FIXED_LENGTH_KEY, false);
+          mRAVEDisabled                  = lConfigFile.getBoolean(RAVE_DISABLED, false);
           if ( !MachineSpecificConfiguration.getCfgBool(CfgItem.DISABLE_SAVED_PLANS) )
           {
             mPlan                        = lConfigFile.getString(PLAN_KEY, null);
@@ -203,6 +206,7 @@ public class RuntimeGameCharacteristics extends GameCharacteristics
     mConfigFile.setProperty(MOVES_IN_MULTIPLE_FACTORS_KEY, moveChoicesFromMultipleFactors);
     mConfigFile.setProperty(MAX_BRANCHING_FACTOR_KEY,      mMaxObservedChoices);
     mConfigFile.setProperty(FIXED_LENGTH_KEY,              mIsFixedMoveCount);
+    mConfigFile.setProperty(RAVE_DISABLED,                 mRAVEDisabled);
     if (mPlan                != null) {mConfigFile.setProperty(PLAN_KEY,     mPlan);}
     if (mControlMask         != null) {mConfigFile.setProperty(CONTROL_MASK, mControlMask);}
     if (mLatchesBasePositive != null) {mConfigFile.setProperty(LATCHES_BASE_POSITIVE, mLatchesBasePositive);}
@@ -281,6 +285,11 @@ public class RuntimeGameCharacteristics extends GameCharacteristics
   public boolean getIsFixedMoveCount()
   {
     return mIsFixedMoveCount;
+  }
+
+  public boolean isRAVEDisabled()
+  {
+    return mRAVEDisabled;
   }
 
   public void setIsFixedSum()
@@ -385,7 +394,7 @@ public class RuntimeGameCharacteristics extends GameCharacteristics
   }
 
   /**
-   * @return the number of factors or 0 if the number is unknown.  (Returns 1 if the game is know not to split into
+   * @return the number of factors or 0 if the number is unknown.  (Returns 1 if the game is known not to split into
    * multiple factors.)
    */
   public int getNumFactors()

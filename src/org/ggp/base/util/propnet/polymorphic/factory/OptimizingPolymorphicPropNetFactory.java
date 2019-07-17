@@ -139,6 +139,7 @@ public class OptimizingPolymorphicPropNetFactory
     xiDescription = CondensationIsolator.run(xiDescription);
 
     // Trace out the final GDL.
+    LOGGER.info("GDL transformations complete");
     for (Gdl gdl : xiDescription)
     {
       LOGGER.trace(gdl.getClass().getSimpleName() + ": " + gdl);

@@ -10,6 +10,7 @@
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">3</entry>
   <entry key="fixed_length">false</entry>
+  <entry key="rave_disabled">true</entry>
   <entry key="control_mask">( ( true ( isplayer 7 9 red ) ), ( true ( isplayer 8 9 blue ) ), ( true ( isplayer 9 9 blue ) ), ( true ( isplayer 5 9 blue ) ), ( true ( isplayer 8 9 red ) ), ( true ( isplayer 6 9 red ) ), ( true ( isplayer 9 9 red ) ), ( true ( isplayer 7 9 blue ) ), ( true ( isplayer 2 9 blue ) ), ( true ( isplayer 2 9 red ) ), ( true ( isplayer 1 9 blue ) ), ( true ( isplayer 4 9 blue ) ), ( true ( isplayer 3 9 red ) ), ( true ( isplayer 4 9 red ) ), ( true ( isplayer 5 9 red ) ), ( true ( isplayer 3 9 blue ) ), ( true ( isplayer 6 9 blue ) ), ( true ( isplayer 1 9 red ) ) )</entry>
   <entry key="latches_base_positive">{false}</entry>
   <entry key="latches_base_negative">{true,{4,-1729388854005203072,-1688856302739457,-1649273733145,562949953421311}}</entry>

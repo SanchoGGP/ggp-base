@@ -175,7 +175,7 @@ public class FactorAnalyser
         // If we've just learned the control set for the first time, record it.
         if ((lFactorInfo.mControlSetCalculated) && (!lAlreadyKnewControlSet))
         {
-          // Build a string representation.  We can't just to lFactorInfo.mControlSet.toString() because it contains
+          // Build a string representation.  We can't just do lFactorInfo.mControlSet.toString() because it contains
           // spurious detail.
           StringBuilder lControlSet = new StringBuilder("( ");
           for (PolymorphicProposition lProp : lFactorInfo.mControlSet)

@@ -987,6 +987,7 @@ public class Sancho extends SampleGamer implements WatchdogExpiryHandler
     //  captures can extend the game and cause moves to be played multiple times)
     boolean useRAVE = (MachineSpecificConfiguration.getCfgBool(CfgItem.ALLOW_RAVE) &&
                        !mGameCharacteristics.isSimultaneousMove &&
+                       !mGameCharacteristics.isRAVEDisabled() &&
                        mNumRoles == 2 &&
                        mUnderlyingStateMachine.getFullPropNet().getLegalPropositions().get(mOurRole).length >= mGameCharacteristics.getMaxLength() &&
                        ((mUnderlyingStateMachine.mLatches.getNumPositiveBaseLatches() > 2) ||
