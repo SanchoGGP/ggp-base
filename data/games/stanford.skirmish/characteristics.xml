@@ -5,10 +5,11 @@
   <entry key="simultaneous">false</entry>
   <entry key="pseudo_simultaneous">false</entry>
   <entry key="iterated">false</entry>
-  <entry key="max_factor_failure_time">21604</entry>
+  <entry key="max_factor_failure_time">0</entry>
   <entry key="num_factors">1</entry>
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">53</entry>
   <entry key="fixed_length">true</entry>
+  <entry key="control_mask">( ( true ( control white ) ), ( true ( control black ) ) )</entry>
   <entry key="factors"></entry>
 </properties>
