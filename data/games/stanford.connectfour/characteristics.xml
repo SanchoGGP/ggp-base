@@ -10,6 +10,7 @@
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">8</entry>
   <entry key="fixed_length">false</entry>
+  <entry key="rave_disabled">false</entry>
   <entry key="control_mask">( ( true ( control black ) ), ( true ( control red ) ) )</entry>
   <entry key="latches_base_positive">{true,{2,-128,549755813887}}</entry>
   <entry key="latches_base_negative">{false}</entry>

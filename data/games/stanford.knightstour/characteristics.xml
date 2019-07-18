@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-  <entry key="plan">move 1 1 2 3,move 2 3 1 5,move 1 5 3 4,move 3 4 5 5,move 5 5 6 3,move 6 3 4 2,move 4 2 6 1,move 6 1 5 3,move 5 3 6 5,move 6 5 4 4,move 4 4 2 5,move 2 5 1 3,move 1 3 2 1,move 2 1 3 3,move 3 3 5 4,move 5 4 6 2,move 6 2 4 1,move 4 1 2 2,move 2 2 1 4,move 1 4 3 5,move 3 5 4 3,move 4 3 5 1,move 5 1 3 2,move 3 2 2 4,move 2 4 4 5,move 4 5 6 4,move 6 4 5 2,move 5 2 3 1,move 3 1 1 2,move 1 2 2 4</entry>
   <entry key="num_roles">1</entry>
   <entry key="simultaneous">false</entry>
   <entry key="pseudo_simultaneous">false</entry>
@@ -11,6 +10,8 @@
   <entry key="moves_in_multiple_factors">false</entry>
   <entry key="max_branching_factor">5</entry>
   <entry key="fixed_length">false</entry>
+  <entry key="rave_disabled">false</entry>
+  <entry key="plan">move 1 1 2 3,move 2 3 1 5,move 1 5 3 4,move 3 4 5 5,move 5 5 6 3,move 6 3 4 2,move 4 2 6 1,move 6 1 5 3,move 5 3 6 5,move 6 5 4 4,move 4 4 2 5,move 2 5 1 3,move 1 3 2 1,move 2 1 3 3,move 3 3 5 4,move 5 4 6 2,move 6 2 4 1,move 4 1 2 2,move 2 2 1 4,move 1 4 3 5,move 3 5 4 3,move 4 3 5 1,move 5 1 3 2,move 3 2 2 4,move 2 4 4 5,move 4 5 6 4,move 6 4 5 2,move 5 2 3 1,move 3 1 1 2,move 1 2 2 4</entry>
   <entry key="control_mask">( ( true ( moveCount 15 ) ), ( true ( moveCount 23 ) ), ( true ( moveCount 8 ) ), ( true ( moveCount 13 ) ), ( true ( moveCount 17 ) ), ( true ( moveCount 19 ) ), ( true ( moveCount 9 ) ), ( true ( moveCount 12 ) ), ( true ( moveCount 20 ) ), ( true ( moveCount 27 ) ), ( true ( moveCount 25 ) ), ( true ( moveCount 18 ) ), ( true ( moveCount 1 ) ), ( true ( moveCount 5 ) ), ( true ( moveCount 16 ) ), ( true ( moveCount 26 ) ), ( true ( moveCount 7 ) ), ( true ( moveCount 11 ) ), ( true ( moveCount 14 ) ), ( true ( moveCount 21 ) ), ( true ( moveCount 22 ) ), ( true ( moveCount 2 ) ), ( true ( moveCount 24 ) ), ( true ( moveCount 6 ) ), ( true ( moveCount 28 ) ), ( true ( moveCount 3 ) ), ( true ( moveCount 30 ) ), ( true ( moveCount 0 ) ), ( true ( moveCount 29 ) ), ( true ( moveCount 10 ) ), ( true ( moveCount 4 ) ) )</entry>
   <entry key="latches_base_positive">{true,{2,6148914689804861440,89478485}}</entry>
   <entry key="latches_base_negative">{true,{2,0,805306368}}</entry>
